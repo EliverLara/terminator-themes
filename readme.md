@@ -4,11 +4,13 @@
 ## Usage:
 
 - Just copy and paste the lines below your favorite theme on your terminator config file (~/.config/terminator/config) in the profiles section.
+- Restart terminator and choose the profile.
 
+![conf](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/conf.png)
 If the above directory does not exist create it by doing the following:
 
 ```bash
-    $ mkdir -p ~/.config/terminator/
+$ mkdir -p ~/.config/terminator/
 $ touch ~/.config/terminator/config
 ```
 The basic structure of config file is:
@@ -31,6 +33,7 @@ The basic structure of config file is:
 ---
 # Themes
 ## Aci
+![Aci](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/aci_2.png)
 ```bash
 [[Aci]]
   background_color = "#0d1926"
@@ -43,7 +46,7 @@ The basic structure of config file is:
 ```
 ---
 ## Aco
-''
+![Aco](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/aco_2.png)
 ```bash
 [[aco]]
    background_color = "#1f1305"
@@ -55,7 +58,7 @@ The basic structure of config file is:
 ```
 ---
 ## Azu
-''
+![Azu](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/azu_2.png)
 ```bash
 [[azu]]
   background_color = "#09111a"
@@ -66,7 +69,7 @@ The basic structure of config file is:
 ```
 ---
 ## Bim
-''
+![Bim](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/bim_2.png)
 ```bash
 [[bim]]
   background_color = "#012849"
@@ -77,7 +80,7 @@ The basic structure of config file is:
 ```
 ---
 ## Cai
-''
+![Cai](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/cai_2.png)
 ```bash
 [[cai]]
   background_color = "#09111a"
@@ -88,7 +91,7 @@ The basic structure of config file is:
 ```
 ---
 ## Chalc
-''
+![Chalc](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/chalc_2.png)
 ```bash
 [[chalc]]
     background_color = "#2d2d2d"
@@ -99,7 +102,7 @@ The basic structure of config file is:
 ```
 ---
 ## Dracula
-''
+![Dracula](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/dracula_2.png)
 ```bash
 [[dracula]]
     background_color = "#282a36"
@@ -110,7 +113,7 @@ The basic structure of config file is:
 ```
 ---
 ## Elementary
-''
+![Elementary](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/elementary_2.png)
 ```bash
 [[elementary]]
     background_color = "#101010"
@@ -121,7 +124,7 @@ The basic structure of config file is:
 ```
 ---
 ## Elic
-''
+![Elic](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/elic_2.png)
 ```bash
 [[elic]]
   background_color = "#4a453e"
@@ -132,7 +135,7 @@ The basic structure of config file is:
 ```
 ---
 ## Elio
-''
+![Elio](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/elio_2.png)
 ```bash
 [[elio]]
     background_color = "#041a3b"
@@ -143,7 +146,7 @@ The basic structure of config file is:
 ```
 ---
 ## Flat
-''
+![Flat](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/flat_2.png)
 ```bash
 [[flat]]
    background_color = "#1f2d3a"
@@ -154,7 +157,7 @@ The basic structure of config file is:
 ```
 ---
 ## Freya
-''
+![Freya](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/freya_2.png)
 ```bash
 [[freya]]
   background_color = "#252e32"
@@ -165,7 +168,7 @@ The basic structure of config file is:
 ```
 ---
 ## Hemisu Dark
-''
+![Hemisu-dark](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/hemisu-dark_2.png)
 ```bash
 [[hemisu-dark]]
     background_image = None
@@ -175,7 +178,7 @@ The basic structure of config file is:
 ```
 ---
 ## Hemisu Light
-''
+![Hemisu-light](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/hemisu-light_2.png)
 ```bash
 [[hemisu-light]]
     background_color = "#EFEFEF"
@@ -186,7 +189,7 @@ The basic structure of config file is:
 ```
 ---
 ## Hybrid
-''
+![Hybrid](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/hybrid_2.png)
 ```bash
 [[hybrid]]
    background_color = "#141414"
@@ -197,7 +200,7 @@ The basic structure of config file is:
 ```
 ---
 ## Jup
-''
+![Jup](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/jup_2.png)
 ```bash
 [[jup]]
     background_color = "#758480"
@@ -208,7 +211,7 @@ The basic structure of config file is:
 ```
 ---
 ## Mar
-''
+![Mar](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/mar_2.png)
 ```bash
 [[mar]]
     background_color = "#ffffff"
@@ -219,7 +222,7 @@ The basic structure of config file is:
 ```
 ---
 ## Material Colors
-''
+![Material-colors](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/material-colors_2.png)
 ```bash
 [[material-colors]]
     background_color = "#1E282C"
@@ -230,7 +233,7 @@ The basic structure of config file is:
 ```
 ---
 ## Miu
-''
+![Miu](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/miu_2.png)
 ```bash
 [[miu]]
     background_color = "#0d1926"
@@ -241,7 +244,7 @@ The basic structure of config file is:
 ```
 ---
 ## Monokai Dark
-''
+![Monokai-dark](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/monokai-dark_2.png)
 ```bash
 [[monokai_dark]]
     background_color = "#272822"
@@ -252,7 +255,7 @@ The basic structure of config file is:
 ```
 ---
 ## Nep
-''
+![Nep](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/nep_2.png)
 ```bash
 [[nep]]
     background_color = "#758480"
@@ -263,7 +266,7 @@ The basic structure of config file is:
 ```
 ---
 ## Ocean Dark
-''
+![Ocean-dark](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/ocean-dark_2.png)
 ```bash
 [[ocean-dark]]
     background_color = "#1c1f27"
@@ -274,7 +277,7 @@ The basic structure of config file is:
 ```
 ---
 ## One Dark
-''
+![One-dark](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/one-dark_2.png)
 ```bash
 [[one-dark]]
     background_color = "#1e2127"
@@ -285,7 +288,7 @@ The basic structure of config file is:
 ```
 ---
 ## One Light
-''
+![One-light](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/one-light_2.png)
 ```bash
 [[one-light]]
     background_color = "#f8f8f8"
@@ -296,7 +299,7 @@ The basic structure of config file is:
 ```
 ---
 ## Pali
-''
+![Pali](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/pali_2.png)
 ```bash
 [[pali]]
     background_color = "#232e37"
@@ -307,7 +310,7 @@ The basic structure of config file is:
 ```
 ---
 ## Peppermint
-''
+![Peppermint](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/peppermint_2.png)
 ```bash
 [[peppermint]]
     background_image = None
@@ -317,7 +320,7 @@ The basic structure of config file is:
 ```
 ---
 ## Sat
-''
+![Sat](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/sat_2.png)
 ```bash
 [[sat]]
     background_color = "#758480"
@@ -328,7 +331,7 @@ The basic structure of config file is:
 ```
 ---
 ## Shel
-''
+![shel](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/shel_2.png)
 ```bash
 [[shel]]
    background_color = "#2a201f"
@@ -339,7 +342,7 @@ The basic structure of config file is:
 ```
 ---
 ## Smyck
-''
+![Smyck](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/smyck_2.png)
 ```bash
 [[smyck]]
   background_color = "#242424"
@@ -350,7 +353,7 @@ The basic structure of config file is:
  ```
 ---
 ## Solorized Dark
-''
+![Solorized-dark](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/solorized-dark_2.png)
 ```bash
 [[solorized-dark]]
     background_color = "#073642"
@@ -361,7 +364,7 @@ The basic structure of config file is:
  ```
 ---
 ## Solorized Light
-''
+![Solorized-light](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/solorized-light_2.png)
 ```bash
 [[solorized-light]]
     background_color = "#fdf6e3"
@@ -372,7 +375,7 @@ The basic structure of config file is:
  ```
 ---
 ## Tin
-''
+![Tin](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/tin_2.png)
 ```bash
  [[tin]]
     background_color = "#2e2e35"
@@ -383,7 +386,7 @@ The basic structure of config file is:
  ```
 ---
 ## Tomorrow
-''
+![Tomorrow](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/tomorrow_2.png)
 ```bash
  [[tomorrow]]
     background_color = "#FFFFFF"
@@ -394,7 +397,7 @@ The basic structure of config file is:
  ```
 ---
 ## Tomorrow Night
-''
+![Tomorow-night](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/tomorrow-night_2.png)
 ```bash
  [[tomorrow-night]]
     background_color = "#1d1f21"
@@ -405,7 +408,7 @@ The basic structure of config file is:
  ```
 ---
 ## Tomorrow Night Blue
-''
+![Tomorrow-night-blue](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/tomorrow-night-blue_2.png)
 ```bash
  [[tomorrow-night-blue]]
     background_color = "#002451"
@@ -416,7 +419,7 @@ The basic structure of config file is:
  ```
 ---
 ## Tomorrow Night Bright
-''
+![Tomorrow-night-bright](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/tomorrow-night-bright_2.png)
 ```bash
   [[tomorrow-night-eighties]]
     background_color = "#2c2c2c"
@@ -427,7 +430,7 @@ The basic structure of config file is:
  ```
 ---
 ## Tomorrow Night Eighties
-''
+![Tomorrow-night-eighties](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/tomorrow-night-eighties_2.png)
 ```bash
   [[tomorrow-night-eighties]]
     background_color = "#2c2c2c"
@@ -438,7 +441,7 @@ The basic structure of config file is:
  ```
 ---
 ## Ura
-''
+![Ura](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/ura_2.png)
 ```bash
   [[ura]]
     background_color = "#feffee"
@@ -449,7 +452,7 @@ The basic structure of config file is:
  ```
 ---
 ## Vag
-''
+![Vag](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/vag_2.png)
 ```bash
   [[vag]]
     background_color = "#191f1d"
@@ -458,13 +461,3 @@ The basic structure of config file is:
     foreground_color = "#d9e6f2"
     palette = "#303030:#a87139:#39a871:#71a839:#7139a8:#a83971:#3971a8:#8a8a8a:#494949:#b0763b:#3bb076:#76b03b:#763bb0:#b03b76:#3b76b0:#cfcfcf"
  ```
----
-This way of installing is equals the below, the only thing is that a shortening of urls (git.io) was used and fits all commands on a single line.
-
-- **or** Download and save the script file, make this file executable and run it:
-
-```bash
-    $ wget https://raw.githubusercontent.com/Mayccoll/Gogh/master/themes/freya.sh
-    $ chmod +x freya.sh
-    $ ./freya.sh
-```
