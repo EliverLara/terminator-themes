@@ -113,6 +113,17 @@ The basic structure of config file is:
     palette = "#646464:#F58E8E:#A9D3AB:#FED37E:#7AABD4:#D6ADD5:#79D4D5:#D4D4D4:#646464:#F58E8E:#A9D3AB:#FED37E:#7AABD4:#D6ADD5:#79D4D5:#D4D4D4"
 ```
 ---
+## Cobalt
+![Cobalt](images/cobalt.png)
+```bash
+[[cobalt]]
+    background_color = "#132738"
+    background_image = None
+    cursor_color = "#aaaaaa"
+    foreground_color = "#ffffff"
+    palette = "#000000:#ff0000:#38de21:#ffe50a:#1460d2:#ff005d:#00bbbb:#bbbbbb:#555555:#ff0000:#38de21:#ffe50a:#1460d2:#ff55ff:#6ae3fa:#ffffff"
+```
+---
 ## Dracula
 ![Dracula](images/dracula.png)
 ```bash
