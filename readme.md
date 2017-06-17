@@ -68,6 +68,19 @@ The basic structure of config file is:
 
 ```
 ---
+
+## Ayu
+![Ayu](images/ayu.png)
+```bash
+[[ayu]]
+   background_color = "#0f1419"
+   background_image = None
+   cursor_color = "#aaaaaa"
+   foreground_color = "#e6e1cf"
+    palette = "#0f1419:#ff3333:#89b73d:#f49c20:#3ea7dc:#b37ed0:#3ea7dc:#f2f2f2:#555753:#ff3333:#89b73d:#f49c20:#3ea7dc:#b37ed0:#3ea7dc:#828c9a"
+
+```
+---
 ## Azu
 ![Azu](images/azu.png)
 ```bash
