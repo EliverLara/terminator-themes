@@ -91,6 +91,18 @@ The basic structure of config file is:
 ```
 ---
 
+## Bloody
+![Bloody](images/bloody.png)
+```bash
+[[bloody]]
+  background_color = "#1e1f29"
+  background_image = None
+  cursor_color = "#f9dc5c"
+  foreground_color = "#aaaaaa"
+  palette = "#2e3436:#ff512f:#b2ffa9:#fffd82:#3185fc:#dd2476:#66d7d1:#f2efea:#555753:#ff512f:#b2ffa9:#fffd82:#3185fc:#dd2476:#66d7d1:#f2efea"
+```
+---
+
 ## Cai
 ![Cai](images/cai.png)
 ```bash
