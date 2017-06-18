@@ -75,12 +75,37 @@ The basic structure of config file is:
 [[ayu]]
    background_color = "#0f1419"
    background_image = None
-   cursor_color = "#aaaaaa"
+   cursor_color = "#f49c20"
    foreground_color = "#e6e1cf"
     palette = "#0f1419:#ff3333:#89b73d:#f49c20:#3ea7dc:#b37ed0:#3ea7dc:#f2f2f2:#555753:#ff3333:#89b73d:#f49c20:#3ea7dc:#b37ed0:#3ea7dc:#828c9a"
 
 ```
 ---
+
+## Ayu Light
+![Ayu-light](images/ayu-light.png)
+```bash
+[[ayu-light]]
+   background_color = "#f5f5f5"
+   background_image = None
+   cursor_color = "#f29718"
+   foreground_color = "#5c6773"
+    palette = "#5c6773:#ff3333:#86b300:#f29718:#41a6d9:#a37acc:#41a6d9:#d9d8d7:#828c99:#ff3333:#86b300:#f29718:#41a6d9:#a37acc:#41a6d9:#d9d8d7"
+```
+---
+
+## Ayu Mirage
+![Ayu-mirage](images/ayu-mirage.png)
+```bash
+[[ayu-light]]
+   background_color = "#212733"
+   background_image = None
+   cursor_color = "#FFD580"
+  foreground_color = "#d9d7ce"
+    palette = "#212733:#ff3333:#bae67e:#ffd580:#5ccfe6:#d4bfff:#5ccfe6:#3d4752:#3e4b59:#ff3333:#bae67e:#ffd580:#5ccfe6:#d4bfff:#5ccfe6:#eeeeec"
+```
+---
+
 ## Azu
 ![Azu](images/azu.png)
 ```bash
@@ -92,6 +117,7 @@ The basic structure of config file is:
   palette = "#000000:#ac6d74:#74ac6d:#aca46d:#6d74ac:#a46dac:#6daca4:#e6e6e6:#262626:#d6b8bc:#bcd6b8:#d6d3b8:#b8bcd6:#d3b8d6:#b8d6d3:#ffffff"
 ```
 ---
+
 ## Bim
 ![Bim](images/bim.png)
 ```bash
@@ -127,6 +153,7 @@ The basic structure of config file is:
   palette = "#000000:#ca274d:#4dca27:#caa427:#274dca:#a427ca:#27caa4:#808080:#808080:#e98da3:#a3e98d:#e9d48d:#8da3e9:#d48de9:#8de9d4:#ffffff"
 ```
 ---
+
 ## Chalc
 ![Chalc](images/chalc.png)
 ```bash
@@ -138,6 +165,7 @@ The basic structure of config file is:
     palette = "#646464:#F58E8E:#A9D3AB:#FED37E:#7AABD4:#D6ADD5:#79D4D5:#D4D4D4:#646464:#F58E8E:#A9D3AB:#FED37E:#7AABD4:#D6ADD5:#79D4D5:#D4D4D4"
 ```
 ---
+
 ## Cobalt
 ![Cobalt](images/cobalt.png)
 ```bash
@@ -149,6 +177,7 @@ The basic structure of config file is:
     palette = "#000000:#ff0000:#38de21:#ffe50a:#1460d2:#ff005d:#00bbbb:#bbbbbb:#555555:#ff0000:#38de21:#ffe50a:#1460d2:#ff55ff:#6ae3fa:#ffffff"
 ```
 ---
+
 ## Dracula
 ![Dracula](images/dracula.png)
 ```bash
@@ -160,6 +189,7 @@ The basic structure of config file is:
     palette = "#44475a:#ff5555:#50fa7b:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#94a3a5:#000000:#ff5555:#50fa7b:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#ffffff"
 ```
 ---
+
 ## Elementary
 ![Elementary](images/elementary.png)
 ```bash
@@ -171,6 +201,7 @@ The basic structure of config file is:
     palette = "#303030:#e1321a:#6ab017:#ffc005:#004f9e:#ec0048:#2aa7e7:#f2f2f2:#5d5d5d:#ff361e:#7bc91f:#ffd00a:#0071ff:#ff1d62:#4bb8fd:#a020f0"
 ```
 ---
+
 ## Elic
 ![Elic](images/elic.png)
 ```bash
@@ -182,6 +213,7 @@ The basic structure of config file is:
   palette = "#303030:#e1321a:#6ab017:#ffc005:#729FCF:#ec0048:#f2f2f2:#2aa7e7:#5d5d5d:#ff361e:#7bc91f:#ffd00a:#0071ff:#ff1d62:#4bb8fd:#a020f0"
 ```
 ---
+
 ## Elio
 ![Elio](images/elio.png)
 ```bash
@@ -389,6 +421,7 @@ The basic structure of config file is:
    palette = "#2c2423:#ab2463:#6ca323:#ab6423:#2c64a2:#6c24a2:#2ca363:#918988:#918988:#f588b9:#c2ee86:#f5ba86:#8fbaec:#c288ec:#8feeb9:#f5eeec"
 ```
 ---
+
 ## Smyck
 ![Smyck](images/smyck.png)
 ```bash
@@ -400,6 +433,21 @@ The basic structure of config file is:
   palette = "#000000:#C75646:#8EB33B:#D0B03C:#72B3CC:#C8A0D1:#218693:#B0B0B0:#5D5D5D:#E09690:#CDEE69:#FFE377:#9CD9F0:#FBB1F9:#77DFD8:#F7F7F7"
  ```
 ---
+
+## Snazzy
+![Snazzy](images/snazzy.png)
+```bash
+[[snazzy]]
+  background_color = "#242424"
+  background_image = None
+  cursor_color = "#97979b"
+  foreground_color = "#eff0eb"
+  palette = "#282a36:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#f1f1f0:#686868:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#eff0eb"
+
+ ```
+---
+
+
 ## Solorized Dark
 ![Solorized-dark](images/solorized-dark.png)
 ```bash
