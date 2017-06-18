@@ -166,6 +166,18 @@ The basic structure of config file is:
 ```
 ---
 
+## Chesterish
+![Chesterish](images/chesterish.png)
+```bash
+[[chesterish]]
+    background_color = "#293340"
+    background_image = None
+    cursor_color = "#2c85f7"
+    foreground_color = "#cdd2e9"
+    palette = "#293340:#e17e85:#61ba86:#ffec8e:#4cb2ff:#be86e3:#2dced0:#cdd2e9:#546386:#e17e85:#61ba86:#ffec8e:#4cb2ff:#be86e3:#2dced0:#cdd2e9"
+```
+---
+
 ## Cobalt
 ![Cobalt](images/cobalt.png)
 ```bash
