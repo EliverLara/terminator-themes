@@ -1,5 +1,5 @@
 # Terminator themes
-> A great collection of [Terminator](http://www.tenshu.net/terminator/) themes.
+> The biggest collection of [Terminator](http://www.tenshu.net/terminator/) themes.
 
 # Contents
 
@@ -9,11 +9,11 @@
 
 # Usage:
 
-- Just copy and paste the lines below your favorite theme on your terminator config file (~/.config/terminator/config) in the profiles section.
+- Just download your favorite theme and paste it on your terminator config file (~/.config/terminator/config) in the profiles section.
 - Restart terminator and choose the profile.
 
 ![conf](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/images/conf.png)
-If the above directory does not exist create it by doing the following:
+If the terminator config directory does not exist create it by doing the following:
 
 ```bash
 $ mkdir -p ~/.config/terminator/
@@ -42,523 +42,101 @@ The basic structure of config file is:
 
 # Themes
 
-## Aci
-
-![Aci](images/aci.png)
-```bash
-[[Aci]]
-  background_color = "#0d1926"
-  background_image = None
-  cursor_color = "#c4e9ff"
-  foreground_color = "#b4e1fd"
-  palette = "#363636:#ff0883:#83ff08:#ff8308:#0883ff:#8308ff:#08ff83:#b6b6b6:#363636:#ff0883:#83ff08:#ff8308:#0883ff:#8308ff:#08ff83:#b6b6b6"
-
-
-```
-
-## Aco
-![Aco](images/aco.png)
-```bash
-[[aco]]
-   background_color = "#1f1305"
-   background_image = None
-   cursor_color = "#bae2fb"
-   foreground_color = "#b4e1fd"
-   palette = "#3f3f3f:#ff0883:#83ff08:#ff8308:#0883ff:#8308ff:#08ff83:#bebebe:#474747:#ff1e8e:#8eff1e:#ff8e1e:#0883ff:#8e1eff:#1eff8e:#c4c4c4"
-
-```
----
-
-## Ayu
-![Ayu](images/ayu.png)
-```bash
-[[ayu]]
-   background_color = "#0f1419"
-   background_image = None
-   cursor_color = "#f49c20"
-   foreground_color = "#e6e1cf"
-    palette = "#0f1419:#ff3333:#89b73d:#f49c20:#3ea7dc:#b37ed0:#3ea7dc:#f2f2f2:#555753:#ff3333:#89b73d:#f49c20:#3ea7dc:#b37ed0:#3ea7dc:#828c9a"
-
-```
----
-
-## Ayu Light
-![Ayu-light](images/ayu-light.png)
-```bash
-[[ayu-light]]
-   background_color = "#f5f5f5"
-   background_image = None
-   cursor_color = "#f29718"
-   foreground_color = "#5c6773"
-    palette = "#5c6773:#ff3333:#86b300:#f29718:#41a6d9:#a37acc:#41a6d9:#d9d8d7:#828c99:#ff3333:#86b300:#f29718:#41a6d9:#a37acc:#41a6d9:#d9d8d7"
-```
----
-
-## Ayu Mirage
-![Ayu-mirage](images/ayu-mirage.png)
-```bash
-[[ayu-light]]
-   background_color = "#212733"
-   background_image = None
-   cursor_color = "#FFD580"
-  foreground_color = "#d9d7ce"
-    palette = "#212733:#ff3333:#bae67e:#ffd580:#5ccfe6:#d4bfff:#5ccfe6:#3d4752:#3e4b59:#ff3333:#bae67e:#ffd580:#5ccfe6:#d4bfff:#5ccfe6:#eeeeec"
-```
----
-
-## Azu
-![Azu](images/azu.png)
-```bash
-[[azu]]
-  background_color = "#09111a"
-  background_image = None
-  cursor_color = "#d2e8fc"
-  foreground_color = "#d9e6f2"
-  palette = "#000000:#ac6d74:#74ac6d:#aca46d:#6d74ac:#a46dac:#6daca4:#e6e6e6:#262626:#d6b8bc:#bcd6b8:#d6d3b8:#b8bcd6:#d3b8d6:#b8d6d3:#ffffff"
-```
----
-
-## Bim
-![Bim](images/bim.png)
-```bash
-[[bim]]
-  background_color = "#012849"
-  background_image = None
-  cursor_color = "#c4d0de"
-  foreground_color = "#a9bed8"
-  palette = "#2c2423:#f557a0:#a9ee55:#f5a255:#5ea2ec:#a957ec:#5eeea0:#918988:#918988:#f579b2:#bbee78:#f5b378:#81b3ec:#bb79ec:#81eeb2:#f5eeec"
-```
----
-
-## Bloody
-![Bloody](images/bloody.png)
-```bash
-[[bloody]]
-  background_color = "#1e1f29"
-  background_image = None
-  cursor_color = "#f9dc5c"
-  foreground_color = "#aaaaaa"
-  palette = "#2e3436:#ff512f:#b2ffa9:#fffd82:#3185fc:#dd2476:#66d7d1:#f2efea:#555753:#ff512f:#b2ffa9:#fffd82:#3185fc:#dd2476:#66d7d1:#f2efea"
-```
----
-
-## Cai
-![Cai](images/cai.png)
-```bash
-[[cai]]
-  background_color = "#09111a"
-  background_image = None
-  cursor_color = "#e3eef9"
-  foreground_color = "#d9e6f2"
-  palette = "#000000:#ca274d:#4dca27:#caa427:#274dca:#a427ca:#27caa4:#808080:#808080:#e98da3:#a3e98d:#e9d48d:#8da3e9:#d48de9:#8de9d4:#ffffff"
-```
----
-
-## Chalc
-![Chalc](images/chalc.png)
-```bash
-[[chalc]]
-    background_color = "#2d2d2d"
-    background_image = None
-    cursor_color = "#e0dddd"
-    foreground_color = "#d4d4d4"
-    palette = "#646464:#F58E8E:#A9D3AB:#FED37E:#7AABD4:#D6ADD5:#79D4D5:#D4D4D4:#646464:#F58E8E:#A9D3AB:#FED37E:#7AABD4:#D6ADD5:#79D4D5:#D4D4D4"
-```
----
-
-## Chesterish
-![Chesterish](images/chesterish.png)
-```bash
-[[chesterish]]
-    background_color = "#293340"
-    background_image = None
-    cursor_color = "#2c85f7"
-    foreground_color = "#cdd2e9"
-    palette = "#293340:#e17e85:#61ba86:#ffec8e:#4cb2ff:#be86e3:#2dced0:#cdd2e9:#546386:#e17e85:#61ba86:#ffec8e:#4cb2ff:#be86e3:#2dced0:#cdd2e9"
-```
----
-
-## Cobalt
-![Cobalt](images/cobalt.png)
-```bash
-[[cobalt]]
-    background_color = "#132738"
-    background_image = None
-    cursor_color = "#aaaaaa"
-    foreground_color = "#ffffff"
-    palette = "#000000:#ff0000:#38de21:#ffe50a:#1460d2:#ff005d:#00bbbb:#bbbbbb:#555555:#ff0000:#38de21:#ffe50a:#1460d2:#ff55ff:#6ae3fa:#ffffff"
-```
----
-
-## Dracula
-![Dracula](images/dracula.png)
-```bash
-[[dracula]]
-    background_color = "#1e1f29"
-    background_image = None
-    cursor_color = "#aaaaaa"
-    foreground_color = "#f8f8f2"
-    palette = "#44475a:#ff5555:#50fa7b:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#94a3a5:#000000:#ff5555:#50fa7b:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#ffffff"
-```
----
-
-## Elementary
-![Elementary](images/elementary.png)
-```bash
-[[elementary]]
-    background_color = "#101010"
-    background_image = None
-    cursor_color = "#ffffff"
-    foreground_color = "#f2f2f2"
-    palette = "#303030:#e1321a:#6ab017:#ffc005:#004f9e:#ec0048:#2aa7e7:#f2f2f2:#5d5d5d:#ff361e:#7bc91f:#ffd00a:#0071ff:#ff1d62:#4bb8fd:#a020f0"
-```
----
-
-## Elic
-![Elic](images/elic.png)
-```bash
-[[elic]]
-  background_color = "#4a453e"
-  background_image = None
-  cursor_color = "#eeecec"
-  foreground_color = "#f2f2f2"
-  palette = "#303030:#e1321a:#6ab017:#ffc005:#729FCF:#ec0048:#f2f2f2:#2aa7e7:#5d5d5d:#ff361e:#7bc91f:#ffd00a:#0071ff:#ff1d62:#4bb8fd:#a020f0"
-```
----
-
-## Elio
-![Elio](images/elio.png)
-```bash
-[[elio]]
-    background_color = "#041a3b"
-    background_image = None
-    cursor_color = "#fbfbfb"
-    foreground_color = "#f2f2f2"
-    palette = "#303030:#e1321a:#6ab017:#ffc005:#729FCF:#ec0048:#2aa7e7:#f2f2f2:#5d5d5d:#ff361e:#7bc91f:#ffd00a:#0071ff:#ff1d62:#4bb8fd:#a020f0"
-```
----
-## Flat
-![Flat](images/flat.png)
-```bash
-[[flat]]
-   background_color = "#1f2d3a"
-   background_image = None
-   cursor_color = "#13c5a2"
-   foreground_color = "#1abc9c"
-   palette = "#2c3e50:#c0392b:#27ae60:#f39c12:#2980b9:#8e44ad:#16a085:#bdc3c7:#34495e:#e74c3c:#2ecc71:#f1c40f:#3498db:#9b59b6:#2AA198:#ecf0f1"
-```
----
-## Freya
-![Freya](images/freya.png)
-```bash
-[[freya]]
-  background_color = "#252e32"
-  background_image = None
-  cursor_color = "#839496"
-  foreground_color = "#94a3a5"
-  palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#ec0048:#2aa198:#94a3a5:#586e75:#cb4b16:#859900:#b58900:#268bd2:#d33682:#2aa198:#6c71c4"
-```
----
-## Hemisu Dark
-![Hemisu-dark](images/hemisu-dark.png)
-```bash
-[[hemisu-dark]]
-    background_image = None
-    cursor_color = "#BAFFAA"
-    foreground_color = "#FFFFFF"
-    palette = "#444444:#FF0054:#B1D630:#9D895E:#67BEE3:#B576BC:#569A9F:#EDEDED:#777777:#D65E75:#BAFFAA:#ECE1C8:#9FD3E5:#DEB3DF:#B6E0E5:#FFFFFF"
-```
----
-## Hemisu Light
-![Hemisu-light](images/hemisu-light.png)
-```bash
-[[hemisu-light]]
-    background_color = "#EFEFEF"
-    background_image = None
-    cursor_color = "#FF0054"
-    foreground_color = "#444444"
-    palette = "#777777:#FF0055:#739100:#503D15:#538091:#5B345E:#538091:#999999:#999999:#D65E76:#9CC700:#947555:#9DB3CD:#A184A4:#85B2AA:#BABABA"
-```
----
-## Hybrid
-![Hybrid](images/hybrid.png)
-```bash
-[[hybrid]]
-   background_color = "#141414"
-   background_image = None
-   cursor_color = "#a6afb0"
-   foreground_color = "#94a3a5"
-   palette = "#282a2e:#A54242:#8C9440:#de935f:#5F819D:#85678F:#5E8D87:#969896:#373b41:#cc6666:#b5bd68:#f0c674:#81a2be:#b294bb:#8abeb7:#c5c8c6"
-```
----
-## Jup
-![Jup](images/jup.png)
-```bash
-[[jup]]
-    background_color = "#758480"
-    background_image = None
-    cursor_color = "#23476a"
-    foreground_color = "#23476a"
-    palette = "#000000:#dd006f:#6fdd00:#dd6f00:#006fdd:#6f00dd:#00dd6f:#f2f2f2:#7d7d7d:#ff74b9:#b9ff74:#ffb974:#74b9ff:#b974ff:#74ffb9:#ffffff"
-```
----
-## Mar
-![Mar](images/mar.png)
-```bash
-[[mar]]
-    background_color = "#ffffff"
-    background_image = None
-    cursor_color = "#23476a"
-    foreground_color = "#23476a"
-    palette = "#000000:#b5407b:#7bb540:#b57b40:#407bb5:#7b40b5:#40b57b:#f8f8f8:#737373:#cd73a0:#a0cd73:#cda073:#73a0cd:#a073cd:#73cda0:#ffffff"
-```
----
-## Material Colors
-![Material-colors](images/material-colors.png)
-```bash
-[[material-colors]]
-    background_color = "#1E282C"
-    background_image = None
-    cursor_color = "#657B83"
-    foreground_color = "#C3C7D1"
-    palette = "#073641:#EB606B:#C3E88D:#F7EB95:#80CBC3:#FF2490:#AEDDFF:#FFFFFF:#002B36:#EB606B:#C3E88D:#F7EB95:#7DC6BF:#6C71C3:#34434D:#FFFFFF"
-```
----
-## Miu
-![Miu](images/miu.png)
-```bash
-[[miu]]
-    background_color = "#0d1926"
-    background_image = None
-    cursor_color = "#d7dee4"
-    foreground_color = "#d9e6f2"
-    palette = "#000000:#b87a7a:#7ab87a:#b8b87a:#7a7ab8:#b87ab8:#7ab8b8:#d9d9d9:#262626:#dbbdbd:#bddbbd:#dbdbbd:#bdbddb:#dbbddb:#bddbdb:#ffffff"
-```
----
-## Monokai Dark
-![Monokai-dark](images/monokai-dark.png)
-```bash
-[[monokai_dark]]
-    background_color = "#272822"
-    background_image = None
-    cursor_color = "#ffffff"
-    foreground_color = "#f8f8f2"
-    palette = "#75715e:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5:#272822:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5"
-```
----
-## Nep
-![Nep](images/nep.png)
-```bash
-[[nep]]
-    background_color = "#758480"
-    background_image = None
-    cursor_color = "#23476a"
-    foreground_color = "#23476a"
-    palette = "#000000:#dd6f00:#00dd6f:#6fdd00:#6f00dd:#dd006f:#006fdd:#f2f2f2:#7d7d7d:#ffb974:#74ffb9:#b9ff74:#b974ff:#ff74b9:#74b9ff:#ffffff"
-```
----
-## Ocean Dark
-![Ocean-dark](images/ocean-dark.png)
-```bash
-[[ocean-dark]]
-    background_color = "#1c1f27"
-    background_image = None
-    cursor_color = "#a0a4b2"
-    foreground_color = "#979cac"
-    palette = "#4F4F4F:#AF4B57:#AFD383:#E5C079:#7D90A4:#A4799D:#85A6A5:#EEEDEE:#7B7B7B:#AF4B57:#CEFFAB:#FFFECC:#B5DCFE:#FB9BFE:#DFDFFD:#FEFFFE"
-```
----
-## One Dark
-![One-dark](images/one-dark.png)
-```bash
-[[one-dark]]
-    background_color = "#1e2127"
-    background_image = None
-    cursor_color = "#676c76"
-    foreground_color = "#5c6370"
-    palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#fffefe"
-```
----
-## One Light
-![One-light](images/one-light.png)
-```bash
-[[one-light]]
-    background_color = "#f8f8f8"
-    background_image = None
-    cursor_color = "#2A2B32"
-    foreground_color = "#2a2b32"
-    palette = "#000000:#DA3E39:#41933E:#855504:#315EEE:#930092:#0E6FAD:#8E8F96:#2A2B32:#DA3E39:#41933E:#855504:#315EEE:#930092:#0E6FAD:#FFFEFE"
-```
----
-## Pali
-![Pali](images/pali.png)
-```bash
-[[pali]]
-    background_color = "#232e37"
-    background_image = None
-    cursor_color = "#e3ecf5"
-    foreground_color = "#d9e6f2"
-    palette = "#0a0a0a:#ab8f74:#74ab8f:#8fab74:#8f74ab:#ab748f:#748fab:#f2f2f2:#5d5d5d:#ff1d62:#9cc3af:#ffd00a:#af9cc3:#ff1d62:#4bb8fd:#a020f0"
-```
----
-## Peppermint
-![Peppermint](images/peppermint.png)
-```bash
-[[peppermint]]
-    background_image = None
-    cursor_color = "#BBBBBB"
-    foreground_color = "#c7c7c7"
-    palette = "#353535:#E64569:#89D287:#DAB752:#439ECF:#D961DC:#64AAAF:#B3B3B3:#535353:#E4859A:#A2CCA1:#E1E387:#6FBBE2:#E586E7:#96DCDA:#DEDEDE"
-```
----
-## Sat
-![Sat](images/sat.png)
-```bash
-[[sat]]
-    background_color = "#758480"
-    background_image = None
-    cursor_color = "#23476a"
-    foreground_color = "#23476a"
-    palette = "#000000:#dd0007:#07dd00:#ddd600:#0007dd:#d600dd:#00ddd6:#f2f2f2:#7d7d7d:#ff7478:#78ff74:#fffa74:#7478ff:#fa74ff:#74fffa:#ffffff"
-```
----
-## Shel
-![shel](images/shel.png)
-```bash
-[[shel]]
-   background_color = "#2a201f"
-   background_image = None
-   cursor_color = "#6192d2"
-   foreground_color = "#4882cd"
-   palette = "#2c2423:#ab2463:#6ca323:#ab6423:#2c64a2:#6c24a2:#2ca363:#918988:#918988:#f588b9:#c2ee86:#f5ba86:#8fbaec:#c288ec:#8feeb9:#f5eeec"
-```
----
-
-## Smyck
-![Smyck](images/smyck.png)
-```bash
-[[smyck]]
-  background_color = "#242424"
-  background_image = None
-  cursor_color = "#f8f6f6"
-  foreground_color = "#f7f7f7"
-  palette = "#000000:#C75646:#8EB33B:#D0B03C:#72B3CC:#C8A0D1:#218693:#B0B0B0:#5D5D5D:#E09690:#CDEE69:#FFE377:#9CD9F0:#FBB1F9:#77DFD8:#F7F7F7"
- ```
----
-
-## Snazzy
-![Snazzy](images/snazzy.png)
-```bash
-[[snazzy]]
-  background_color = "#242424"
-  background_image = None
-  cursor_color = "#97979b"
-  foreground_color = "#eff0eb"
-  palette = "#282a36:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#f1f1f0:#686868:#ff5c57:#5af78e:#f3f99d:#57c7ff:#ff6ac1:#9aedfe:#eff0eb"
-
- ```
----
-
-
-## Solorized Dark
-![Solorized-dark](images/solorized-dark.png)
-```bash
-[[solorized-dark]]
-    background_color = "#073642"
-    background_image = None
-    cursor_color = "#a9b5b5"
-    foreground_color = "#93a1a1"
-    palette = "#586e75:#dc322f:#859900:#b58900:#268bd2:#6c71c4:#2aa198:#93a1a1:#002b36:#d70000:#5f8700:#af8700:#0087ff:#5f5faf:#00afaf:#8a8a8a"
- ```
----
-## Solorized Light
-![Solorized-light](images/solorized-light.png)
-```bash
-[[solorized-light]]
-    background_color = "#fdf6e3"
-    background_image = None
-    cursor_color = "#586e75"
-    foreground_color = "#586e75"
-    palette = "#002b36:#dc322f:#859900:#b58900:#268bd2:#6c71c4:#2aa198:#93a1a1:#1c1c1c:#d70000:#5f8700:#af8700:#0087ff:#5f5faf:#00afaf:#8a8a8a"
- ```
----
-## Tin
-![Tin](images/tin.png)
-```bash
- [[tin]]
-    background_color = "#2e2e35"
-    background_image = None
-    cursor_color = "#fdfafa"
-    foreground_color = "#ffffff"
-    palette = "#000000:#8d534e:#4e8d53:#888d4e:#534e8d:#8d4e88:#4e888d:#ffffff:#000000:#b57d78:#78b57d:#b0b578:#7d78b5:#b578b0:#78b0b5:#ffffff"
- ```
----
-## Tomorrow
-![Tomorrow](images/tomorrow.png)
-```bash
- [[tomorrow]]
-    background_color = "#FFFFFF"
-    background_image = None
-    cursor_color = "#4C4C4C"
-    foreground_color = "#4D4D4C"
-    palette = "#000000:#C82828:#718C00:#EAB700:#4171AE:#8959A8:#3E999F:#FFFEFE:#000000:#C82828:#708B00:#E9B600:#4170AE:#8958A7:#3D999F:#FFFEFE"
- ```
----
-## Tomorrow Night
-![Tomorow-night](images/tomorrow-night.png)
-```bash
- [[tomorrow-night]]
-    background_color = "#1d1f21"
-    background_image = None
-    cursor_color = "#d2d4d2"
-    foreground_color = "#c5c8c6"
-    palette = "#000000:#CC6666:#B5BD68:#F0C674:#81A2BE:#B293BB:#8ABEB7:#FFFEFE:#000000:#CC6666:#B5BD68:#F0C574:#80A1BD:#B294BA:#8ABDB6:#FFFEFE"
- ```
----
-## Tomorrow Night Blue
-![Tomorrow-night-blue](images/tomorrow-night-blue.png)
-```bash
- [[tomorrow-night-blue]]
-    background_color = "#002451"
-    background_image = None
-    cursor_color = "#ffffff"
-    foreground_color = "#fffefe"
-    palette = "#000000:#FF9DA3:#D1F1A9:#FFEEAD:#BBDAFF:#EBBBFF:#99FFFF:#FFFEFE:#000000:#FF9CA3:#D0F0A8:#FFEDAC:#BADAFF:#EBBAFF:#99FFFF:#FFFEFE"
- ```
----
-
-## Tomorrow Night Eighties
-![Tomorrow-night-eighties](images/tomorrow-night-eighties.png)
-```bash
-  [[tomorrow-night-eighties]]
-    background_color = "#2c2c2c"
-    background_image = None
-    cursor_color = "#d8d8d8"
-    foreground_color = "#cccccc"
-    palette = "#000000:#F27779:#99CC99:#FFCC66:#6699CC:#CC99CC:#66CCCC:#FFFEFE:#000000:#F17779:#99CC99:#FFCC66:#6699CC:#CC99CC:#66CCCC:#FFFEFE"
- ```
----
-## Ura
-![Ura](images/ura.png)
-```bash
-  [[ura]]
-    background_color = "#feffee"
-    background_image = None
-    cursor_color = "#23476a"
-    foreground_color = "#23476a"
-    palette = "#000000:#c21b6f:#6fc21b:#c26f1b:#1b6fc2:#6f1bc2:#1bc26f:#808080:#808080:#ee84b9:#b9ee84:#eeb984:#84b9ee:#b984ee:#84eeb9:#e5e5e5"
- ```
----
-## Vag
-![Vag](images/vag.png)
-```bash
-  [[vag]]
-    background_color = "#191f1d"
-    background_image = None
-    cursor_color = "#e5f0fa"
-    foreground_color = "#d9e6f2"
-    palette = "#303030:#a87139:#39a871:#71a839:#7139a8:#a83971:#3971a8:#8a8a8a:#494949:#b0763b:#3bb076:#76b03b:#763bb0:#b03b76:#3b76b0:#cfcfcf"
- ```
-
+ 
+**3024 day**![3024 day](images/3024-Day.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/3024%20Day.config)  | **3024 night**![3024 night](images/3024-Night.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/3024%20Night.config)
+:---------------------------------------------:|:----------------------------------------------:  
+**Aci**![Aci](images/Aci.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Aci.config)  | **Aco**![Aco](images/Aco.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Aco.config)  
+**Adventuretime**![Adventuretime](images/AdventureTime.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/AdventureTime.config)  | **Afterglow**![Afterglow](images/Afterglow.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Afterglow.config)  
+**Alienblood**![Alienblood](images/AlienBlood.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/AlienBlood.config)  | **Argonaut**![Argonaut](images/Argonaut.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Argonaut.config)  
+**Arthur**![Arthur](images/Arthur.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Arthur.config)  | **Ateliersulphurpool**![Ateliersulphurpool](images/AtelierSulphurpool.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/AtelierSulphurpool.config)  
+**Atom**![Atom](images/Atom.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Atom.config)  | **Atomonelight**![Atomonelight](images/AtomOneLight.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/AtomOneLight.config)  
+**Axu**![Axu](images/Axu.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Axu.config)  | **Ayu**![Ayu](images/ayu.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/ayu.config)  
+**Ayu_light**![Ayu_light](images/ayu_light.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/ayu_light.config)  | **Ayu mirage**![Ayu mirage](images/Ayu-mirage.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Ayu%20mirage.config)  
+**Batman**![Batman](images/Batman.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Batman.config)  | **Belafonte day**![Belafonte day](images/Belafonte-Day.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Belafonte%20Day.config)  
+**Belafonte night**![Belafonte night](images/Belafonte-Night.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Belafonte%20Night.config)  | **Bim**![Bim](images/Bim.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Bim.config)  
+**Birdsofparadise**![Birdsofparadise](images/BirdsOfParadise.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/BirdsOfParadise.config)  | **Blazer**![Blazer](images/Blazer.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Blazer.config)  
+**Bloody**![Bloody](images/Bloody.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Bloody.config)  | **Borland**![Borland](images/Borland.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Borland.config)  
+**Bright lights**![Bright lights](images/Bright-Lights.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Bright%20Lights.config)  | **Broadcast**![Broadcast](images/Broadcast.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Broadcast.config)  
+**Brogrammer**![Brogrammer](images/Brogrammer.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Brogrammer.config)  | **C64**![C64](images/C64.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/C64.config)  
+**Cai**![Cai](images/Cai.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Cai.config)  | **Chalkboard**![Chalkboard](images/Chalkboard.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Chalkboard.config)  
+**Chalk**![Chalk](images/Chalk.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Chalk.config)  | **Chesterish**![Chesterish](images/Chesterish.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Chesterish.config)  
+**Ciapre**![Ciapre](images/Ciapre.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Ciapre.config)  | **Clrs**![Clrs](images/CLRS.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/CLRS.config)  
+**Cobalt2**![Cobalt2](images/Cobalt2.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Cobalt2.config)  | **Cobalt neon**![Cobalt neon](images/Cobalt-Neon.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Cobalt%20Neon.config)  
+**Crayonponyfish**![Crayonponyfish](images/CrayonPonyFish.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/CrayonPonyFish.config)  | **Dark pastel**![Dark pastel](images/Dark-Pastel.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Dark%20Pastel.config)  
+**Darkside**![Darkside](images/Darkside.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Darkside.config)  | **Deep**![Deep](images/deep.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/deep.config)  
+**Desert**![Desert](images/Desert.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Desert.config)  | **Dimmedmonokai**![Dimmedmonokai](images/DimmedMonokai.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/DimmedMonokai.config)  
+**Dotgov**![Dotgov](images/DotGov.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/DotGov.config)  | **Dracula**![Dracula](images/Dracula.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Dracula.config)  
+**Duotone dark**![Duotone dark](images/Duotone-Dark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Duotone%20Dark.config)  | **Earthsong**![Earthsong](images/Earthsong.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Earthsong.config)  
+**Elemental**![Elemental](images/Elemental.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Elemental.config)  | **Elementary**![Elementary](images/Elementary.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Elementary.config)  
+**Elio**![Elio](images/Elio.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Elio.config)  | **Encom**![Encom](images/ENCOM.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/ENCOM.config)  
+**Espresso**![Espresso](images/Espresso.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Espresso.config)  | **Espresso libre**![Espresso libre](images/Espresso-Libre.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Espresso%20Libre.config)  
+**Fideloper**![Fideloper](images/Fideloper.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Fideloper.config)  | **Firefoxdev**![Firefoxdev](images/FirefoxDev.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/FirefoxDev.config)  
+**Firewatch**![Firewatch](images/Firewatch.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Firewatch.config)  | **Fishtank**![Fishtank](images/FishTank.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/FishTank.config)  
+**Flat**![Flat](images/Flat.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Flat.config)  | **Flatland**![Flatland](images/Flatland.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Flatland.config)  
+**Floraverse**![Floraverse](images/Floraverse.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Floraverse.config)  | **Forestblue**![Forestblue](images/ForestBlue.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/ForestBlue.config)  
+**Freya**![Freya](images/Freya.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Freya.config)  | **Frontenddelight**![Frontenddelight](images/FrontEndDelight.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/FrontEndDelight.config)  
+**Funforrest**![Funforrest](images/FunForrest.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/FunForrest.config)  | **Galaxy**![Galaxy](images/Galaxy.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Galaxy.config)  
+**Github**![Github](images/Github.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Github.config)  | **Glacier**![Glacier](images/Glacier.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Glacier.config)  
+**Grape**![Grape](images/Grape.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Grape.config)  | **Grass**![Grass](images/Grass.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Grass.config)  
+**Gruvbox dark**![Gruvbox dark](images/Gruvbox-Dark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Gruvbox%20Dark.config)  | **Hardcore**![Hardcore](images/Hardcore.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Hardcore.config)  
+**Harper**![Harper](images/Harper.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Harper.config)  | **Hemisu dark**![Hemisu dark](images/Hemisu-dark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Hemisu%20dark.config)  
+**Hemisu light**![Hemisu light](images/Hemisu-light.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Hemisu%20light.config)  | **Highway**![Highway](images/Highway.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Highway.config)  
+**Hipster green**![Hipster green](images/Hipster-Green.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Hipster%20Green.config)  | **Homebrew**![Homebrew](images/Homebrew.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Homebrew.config)  
+**Hurtado**![Hurtado](images/Hurtado.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Hurtado.config)  | **Hybrid**![Hybrid](images/Hybrid.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Hybrid.config)  
+**Ic_green_ppl**![Ic_green_ppl](images/IC_Green_PPL.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/IC_Green_PPL.config)  | **Ic_orange_ppl**![Ic_orange_ppl](images/IC_Orange_PPL.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/IC_Orange_PPL.config)  
+**Idletoes**![Idletoes](images/idleToes.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/idleToes.config)  | **Ir_black**![Ir_black](images/IR_Black.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/IR_Black.config)  
+**Jackie brown**![Jackie brown](images/Jackie-Brown.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Jackie%20Brown.config)  | **Japanesque**![Japanesque](images/Japanesque.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Japanesque.config)  
+**Jellybeans**![Jellybeans](images/Jellybeans.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Jellybeans.config)  | **Jetbrains darcula**![Jetbrains darcula](images/JetBrains-Darcula.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/JetBrains%20Darcula.config)  
+**Juicy**![Juicy](images/Juicy.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Juicy.config)  | **Kibble**![Kibble](images/Kibble.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Kibble.config)  
+**Later this evening**![Later this evening](images/Later-This-Evening.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Later%20This%20Evening.config)  | **Lavandula**![Lavandula](images/Lavandula.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Lavandula.config)  
+**Liquidcarbon**![Liquidcarbon](images/LiquidCarbon.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/LiquidCarbon.config)  | **Liquidcarbontransparent**![Liquidcarbontransparent](images/LiquidCarbonTransparent.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/LiquidCarbonTransparent.config)  
+**Liquidcarbontransparentinverse**![Liquidcarbontransparentinverse](images/LiquidCarbonTransparentInverse.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/LiquidCarbonTransparentInverse.config)  | **Man page**![Man page](images/Man-Page.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Man%20Page.config)  
+**Mar**![Mar](images/Mar.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Mar.config)  | **Material colors**![Material colors](images/Material-colors.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Material%20colors.config)  
+**Material**![Material](images/Material.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Material.config)  | **Materialdark**![Materialdark](images/MaterialDark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/MaterialDark.config)  
+**Mathias**![Mathias](images/Mathias.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Mathias.config)  | **Medallion**![Medallion](images/Medallion.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Medallion.config)  
+**Misterioso**![Misterioso](images/Misterioso.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Misterioso.config)  | **Miu**![Miu](images/Miu.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Miu.config)  
+**Molokai**![Molokai](images/Molokai.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Molokai.config)  | **Monalisa**![Monalisa](images/MonaLisa.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/MonaLisa.config)  
+**Monokai dark**![Monokai dark](images/Monokai-dark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Monokai%20dark.config)  | **Monokai soda**![Monokai soda](images/Monokai-Soda.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Monokai%20Soda.config)  
+**Monokai vivid**![Monokai vivid](images/Monokai-Vivid.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Monokai%20Vivid.config)  | **N0tch2k**![N0tch2k](images/N0tch2k.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/N0tch2k.config)  
+**Neopolitan**![Neopolitan](images/Neopolitan.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Neopolitan.config)  | **Neutron**![Neutron](images/Neutron.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Neutron.config)  
+**Nightlion v1**![Nightlion v1](images/NightLion-v1.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/NightLion%20v1.config)  | **Nightlion v2**![Nightlion v2](images/NightLion-v2.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/NightLion%20v2.config)  
+**Novel**![Novel](images/Novel.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Novel.config)  | **Obsidian**![Obsidian](images/Obsidian.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Obsidian.config)  
+**Ocean**![Ocean](images/Ocean.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Ocean.config)  | **Ocean dark**![Ocean dark](images/Ocean-dark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Ocean%20dark.config)  
+**Oceanicmaterial**![Oceanicmaterial](images/OceanicMaterial.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/OceanicMaterial.config)  | **Ollie**![Ollie](images/Ollie.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Ollie.config)  
+**One dark**![One dark](images/One-dark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/One%20dark.config)  | **Onehalfdark**![Onehalfdark](images/OneHalfDark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/OneHalfDark.config)  
+**Onehalflight**![Onehalflight](images/OneHalfLight.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/OneHalfLight.config)  | **Pali**![Pali](images/Pali.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Pali.config)  
+**Panda**![Panda](images/Panda.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Panda.config)  | **Pandora**![Pandora](images/Pandora.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Pandora.config)  
+**Paraiso dark**![Paraiso dark](images/Paraiso-Dark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Paraiso%20Dark.config)  | **Parasio dark**![Parasio dark](images/Parasio-Dark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Parasio%20Dark.config)  
+**Paulmillr**![Paulmillr](images/PaulMillr.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/PaulMillr.config)  | **Pencildark**![Pencildark](images/PencilDark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/PencilDark.config)  
+**Pencillight**![Pencillight](images/PencilLight.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/PencilLight.config)  | **Peppermint**![Peppermint](images/Peppermint.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Peppermint.config)  
+**Piatto light**![Piatto light](images/Piatto-Light.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Piatto%20Light.config)  | **Pnevma**![Pnevma](images/Pnevma.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Pnevma.config)  
+**Pro**![Pro](images/Pro.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Pro.config)  | **Red alert**![Red alert](images/Red-Alert.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Red%20Alert.config)  
+**Red planet**![Red planet](images/Red-Planet.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Red%20Planet.config)  | **Red sands**![Red sands](images/Red-Sands.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Red%20Sands.config)  
+**Rippedcasts**![Rippedcasts](images/Rippedcasts.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Rippedcasts.config)  | **Royal**![Royal](images/Royal.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Royal.config)  
+**Ryuuko**![Ryuuko](images/Ryuuko.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Ryuuko.config)  | **Seafoam pastel**![Seafoam pastel](images/Seafoam-Pastel.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Seafoam%20Pastel.config)  
+**Seashells**![Seashells](images/SeaShells.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/SeaShells.config)  | **Seti**![Seti](images/Seti.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Seti.config)  
+**Shaman**![Shaman](images/Shaman.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Shaman.config)  | **Shel**![Shel](images/Shel.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Shel.config)  
+**Slate**![Slate](images/Slate.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Slate.config)  | **Smyck**![Smyck](images/Smyck.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Smyck.config)  
+**Snazzy**![Snazzy](images/Snazzy.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Snazzy.config)  | **Softserver**![Softserver](images/SoftServer.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/SoftServer.config)  
+**Solarized darcula**![Solarized darcula](images/Solarized-Darcula.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Solarized%20Darcula.config)  | **Solarized dark**![Solarized dark](images/Solarized-Dark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Solarized%20Dark.config)  
+**Solarized dark higher contrast**![Solarized dark higher contrast](images/Solarized-Dark-Higher-Contrast.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Solarized%20Dark%20Higher%20Contrast.config)  | **Solarized dark - patched**![Solarized dark - patched](images/Solarized-Dark---Patched.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Solarized%20Dark%20-%20Patched.config)  
+**Solarized light**![Solarized light](images/Solarized-Light.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Solarized%20Light.config)  | **Spacedust**![Spacedust](images/Spacedust.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Spacedust.config)  
+**Spacegray**![Spacegray](images/SpaceGray.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/SpaceGray.config)  | **Spacegray eighties**![Spacegray eighties](images/SpaceGray-Eighties.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/SpaceGray%20Eighties.config)  
+**Spacegray eighties dull**![Spacegray eighties dull](images/SpaceGray-Eighties-Dull.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/SpaceGray%20Eighties%20Dull.config)  | **Spiderman**![Spiderman](images/Spiderman.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Spiderman.config)  
+**Spring**![Spring](images/Spring.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Spring.config)  | **Square**![Square](images/Square.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Square.config)  
+**Sundried**![Sundried](images/Sundried.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Sundried.config)  | **Symfonic**![Symfonic](images/Symfonic.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Symfonic.config)  
+**Teerb**![Teerb](images/Teerb.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Teerb.config)  | **Terminal basic**![Terminal basic](images/Terminal-Basic.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Terminal%20Basic.config)  
+**Thayer bright**![Thayer bright](images/Thayer-Bright.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Thayer%20Bright.config)  | **The hulk**![The hulk](images/The-Hulk.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/The%20Hulk.config)  
+**Tomorrow**![Tomorrow](images/Tomorrow.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Tomorrow.config)  | **Tomorrow night blue**![Tomorrow night blue](images/Tomorrow-Night-Blue.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Tomorrow%20Night%20Blue.config)  
+**Tomorrow night bright**![Tomorrow night bright](images/Tomorrow-Night-Bright.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Tomorrow%20Night%20Bright.config)  | **Tomorrow night**![Tomorrow night](images/Tomorrow-Night.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Tomorrow%20Night.config)  
+**Tomorrow night eighties**![Tomorrow night eighties](images/Tomorrow-Night-Eighties.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Tomorrow%20Night%20Eighties.config)  | **Toychest**![Toychest](images/ToyChest.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/ToyChest.config)  
+**Treehouse**![Treehouse](images/Treehouse.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Treehouse.config)  | **Twilight**![Twilight](images/Twilight.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Twilight.config)  
+**Ubuntu**![Ubuntu](images/Ubuntu.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Ubuntu.config)  | **Underthesea**![Underthesea](images/UnderTheSea.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/UnderTheSea.config)  
+**Urple**![Urple](images/Urple.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Urple.config)  | **Vag**![Vag](images/Vag.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Vag.config)  
+**Vaughn**![Vaughn](images/Vaughn.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Vaughn.config)  | **Vibrantink**![Vibrantink](images/VibrantInk.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/VibrantInk.config)  
+**Violet dark**![Violet dark](images/Violet-Dark.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Violet%20Dark.config)  | **Violet light**![Violet light](images/Violet-Light.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Violet%20Light.config)  
+**Warmneon**![Warmneon](images/WarmNeon.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/WarmNeon.config)  | **Wez**![Wez](images/Wez.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Wez.config)  
+**Wildcherry**![Wildcherry](images/WildCherry.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/WildCherry.config)  | **Wombat**![Wombat](images/Wombat.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Wombat.config)  
+**Wryan**![Wryan](images/Wryan.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Wryan.config)  | **Zenburn**![Zenburn](images/Zenburn.png)  [Download](https://raw.githubusercontent.com/EliverLara/terminator-themes/master/schemes/Zenburn.config)  
 
 [⬆ Back to top](#contents)
