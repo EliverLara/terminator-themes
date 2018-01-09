@@ -10,7 +10,13 @@
 ```sh
  pip install requests
 ```
-**2. Getting the correct plugin**
+**2. Create plugins directory if it does not exist**
+
+```sh
+ mkdir -p $HOME/.config/terminator/plugins
+```
+
+**3. Getting the correct plugin**
 
 For terminator >= 1.9
 
@@ -24,7 +30,7 @@ For terminator < 1.9
  wget https://git.io/v5Zwz -O $HOME"/.config/terminator/plugins/terminator-themes.py"
 ```
 
-**3. Activation**
+**4. Activation**
 
 Check the `TerminatorThemes` option under `terminator > preferences > plugins`.
 
