@@ -33,6 +33,7 @@ For terminator < 1.9
 **4. Activation**
 
 Check the `TerminatorThemes` option under `terminator > preferences > plugins`.
+Preferences can be accessed by right clicking inside the terminator window.
 
 
 ## Usage
