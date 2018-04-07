@@ -40,3 +40,23 @@ Check the `TerminatorThemes` option under `terminator > preferences > plugins`.
 * Open the terminator context menu and select `Themes`.
 * Select you favorite theme and click `install` (you can [preview available themes](themes.md) before installing).
 * Enjoy! :smiley:
+
+### Setting a Default
+
+There are two ways to set a chosen theme as a default:
+
+**Option One: Edit Terminator Config Manually**
+
+Once you install a theme it's stored in Preferences > Profiles. To change an installed theme to the default one open `~/.config/terminator/config` and replace the `[[default]]` theme with your preferred theme under the `[profiles]` setting. (thanks @jacsmith21)
+
+**Option Two: Use the GUI**
+
+If you do not want to deal with the modification of the configuration file, you can do the following:
+
+1. Go to `Preferences`
+2. Choose the `Layouts` tab.
+3. Choose your preferred layout.
+4. Choose the layout terminal (in the next column).
+5. Choose you preferred profile.
+
+![](images/set-default.png)
