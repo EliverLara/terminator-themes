@@ -10,6 +10,8 @@
 ```sh
  pip install requests
 ```
+> **Note:** If you're using python 3, ignore the previous command and install the `python2-requests` package for your specific OS.
+
 **2. Create plugins directory if it does not exist**
 
 ```sh
