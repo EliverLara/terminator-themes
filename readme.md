@@ -1,5 +1,5 @@
 # Terminator themes
-> The biggest collection of [Terminator](http://www.tenshu.net/terminator/) themes in a plugin.
+> The biggest collection of [Terminator](https://launchpad.net/terminator) themes in a plugin.
 
 ![](images/preview.gif)
 
