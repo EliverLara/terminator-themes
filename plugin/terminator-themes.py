@@ -12,6 +12,8 @@ class TerminatorThemes(plugin.Plugin):
     capabilities = ['terminal_menu']
     config_base = ConfigBase()
     base_url = 'https://api.github.com/repos/EliverLara/terminator-themes/contents/schemes'
+    inherits_config_from = "default"
+
     def callback(self, menuitems, menu, terminal):
         """Add our item to the menu"""
         self.terminal = terminal
@@ -23,20 +25,9 @@ class TerminatorThemes(plugin.Plugin):
 
     def configure(self, widget, data = None):
         ui = {}
-   
-        dbox = Gtk.Dialog(
-                        _("Terminator themes"),
-                        None,
-                        Gtk.DialogFlags.MODAL,
-                        (
-                            
-                            _("_Close"), Gtk.ResponseType.ACCEPT
-                        )
-                        )
+        dbox = Gtk.Dialog( _("Terminator themes"), None, Gtk.DialogFlags.MODAL)
 
-        self.liststore = Gtk.ListStore(str, bool)
-
-        profiles_from_repo = []
+        self.profiles_from_repo = []
         response = requests.get(self.base_url)
         
         if response.status_code != 200:
@@ -44,24 +35,39 @@ class TerminatorThemes(plugin.Plugin):
             return
 
         for repo in response.json():
-            profiles_from_repo.append(repo['name'])
+            self.profiles_from_repo.append(repo['name'])
         
-       
-        profiles = self.terminal.config.list_profiles()
+        self.profiles = self.terminal.config.list_profiles()
 
+        main_container = Gtk.HBox(spacing=7)
+        main_container.pack_start(self._create_themes_list(ui), True, True, 0)
+        main_container.pack_start(self._create_settings_grid(ui), True, True, 0)
+        dbox.vbox.pack_start(main_container, True, True, 0)
+
+        self.dbox = dbox
+        dbox.show_all()
+        res = dbox.run()
+
+        if res == Gtk.ResponseType.ACCEPT:
+            self.terminal.config.save()
+
+        del(self.dbox)
+        dbox.destroy()
+        return
+
+    def _create_themes_list(self, ui):
+        profiles_list_model = Gtk.ListStore(str, bool)
         # Set add/remove buttons availability
-        for profile in profiles_from_repo:
+        for profile in self.profiles_from_repo:
             profile = profile.split(".")
-            if profile[0] in profiles:
-                self.liststore.append([profile[0], False])
+            if profile[0] in self.profiles:
+                profiles_list_model.append([profile[0], False])
             else:
-                self.liststore.append([profile[0], True])
+                profiles_list_model.append([profile[0], True])
         
-
-        treeview = Gtk.TreeView(self.liststore)
+        treeview = Gtk.TreeView(profiles_list_model)
 
         selection = treeview.get_selection()
-       
         selection.set_mode(Gtk.SelectionMode.SINGLE)
         selection.connect("changed", self.on_selection_changed, ui)
         ui['treeview'] = treeview
@@ -70,48 +76,75 @@ class TerminatorThemes(plugin.Plugin):
         column_text = Gtk.TreeViewColumn("Theme", renderer_text, text=0)
         treeview.append_column(column_text)
 
-
         scroll_window = Gtk.ScrolledWindow()
-        scroll_window.set_size_request(500, 250)
+        scroll_window.set_size_request(300, 250)
         scroll_window.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
         scroll_window.add_with_viewport(treeview)
 
-        hbox = Gtk.HBox()
-        hbox.pack_start(scroll_window, True, True, 0)
-        dbox.vbox.pack_start(hbox, True, True, 0)
+        return scroll_window
 
-        button_box = Gtk.VBox()
+    def _create_settings_grid(self, ui):
+        grid = Gtk.Grid()
+        grid.set_column_spacing(5)
+        grid.set_row_spacing(7)
+        grid.attach(self._create_default_inherits_check(ui), 0, 0, 2, 1)
+        grid.attach(Gtk.Label("Available profiles: "), 0, 1, 1, 1)
+        grid.attach(self._create_inherits_from_combo(ui), 1, 1, 1, 1)
+        grid.attach(self._create_main_action_button(ui, "install", self.on_install), 0, 4, 1, 1)
+        grid.attach(self._create_main_action_button(ui, "remove", self.on_uninstall), 1, 4, 1, 1)
+
+        return grid
+
+    def _create_default_inherits_check(self, ui):
+        check = Gtk.CheckButton("Inherit preferences from default profile")
+        check.set_active(True)
+        check.connect("toggled", self.on_inheritsfromdefaultcheck_toggled, ui)
+        ui['check_inherits_from_default'] = check
         
-        button = Gtk.Button(_("Install"))
-        button_box.pack_start(button, False, True, 0)
-        button.connect("clicked", self.on_install, ui) 
-        button.set_sensitive(False)
-        ui['button_install'] = button
+        return check
 
-        button = Gtk.Button(_("Remove"))
-        button_box.pack_start(button, False, True, 0)
-        button.connect("clicked", self.on_uninstall, ui) 
-        button.set_sensitive(False)
-        ui['button_uninstall'] = button
+    def _create_inherits_from_combo(self, ui):
+        combo = Gtk.ComboBoxText()
+        combo.set_entry_text_column(0)
+        combo.set_sensitive(False)
+        combo.connect("changed", self.on_inheritsfromcombo_changed, ui)
+        ui['inherits_from_combo'] = combo
 
-        hbox.pack_start(button_box, False, True, 0)
-        self.dbox = dbox
-        dbox.show_all()
-        res = dbox.run()
-        if res == Gtk.ResponseType.ACCEPT:
-            self.terminal.config.save()
-        del(self.dbox)
-        dbox.destroy()
-        return
+        for profile in self.profiles:
+            combo.append_text(profile)
 
-   
+        combo.set_active(self.profiles.index(self.terminal.config.get_profile()))
+
+        return combo
+    
+    def _create_main_action_button(self, ui, label, action):
+        btn = Gtk.Button(_(label.capitalize()))
+        btn.connect("clicked", action, ui) 
+        btn.set_sensitive(False)
+        ui['button_' + label] = btn
+
+        return btn
+
+    def  on_inheritsfromdefaultcheck_toggled(self, check, data=None):
+        if check.get_active() is not True:
+            data["inherits_from_combo"].set_sensitive(True)
+            self.inherits_config_from = self.profiles[data['inherits_from_combo'].get_active()]
+        else:
+            data["inherits_from_combo"].set_sensitive(False)
+            self.inherits_config_from = 'default'
+        
+    def  on_inheritsfromcombo_changed(self, combo, data):
+        if combo.get_sensitive():    
+            self.inherits_config_from = self.profiles[combo.get_active()]
+        else:
+            self.inherits_config_from = 'default'
+
     def on_selection_changed(self, selection, data=None):
         (model, iter) = selection.get_selected()
         data['button_install'].set_sensitive(model[iter][1])
-        data['button_uninstall'].set_sensitive(model[iter][1] is not True)
+        data['button_remove'].set_sensitive(model[iter][1] is not True)
 
     def on_uninstall(self, button, data):
-
         treeview = data['treeview']
         selection = treeview.get_selection()
         (store, iter) = selection.get_selected()
@@ -124,9 +157,10 @@ class TerminatorThemes(plugin.Plugin):
 
         self.terminal.config.del_profile(target)
         self.terminal.config.save()
+        self.update_comboInheritsFrom(data)
 
         #'Add' button available again
-        self.liststore.set_value(iter, 1, True)
+        data['treeview'].get_model().set_value(iter, 1, True)
         self.on_selection_changed(selection, data)
 
     def on_install(self, button, data):
@@ -140,7 +174,6 @@ class TerminatorThemes(plugin.Plugin):
         if not iter:
             return
 
-    
         headers = { "Accept": "application/vnd.github.v3.raw" }
         response = requests.get(self.base_url+ '/' + target + '.config', headers=headers)
        
@@ -148,20 +181,40 @@ class TerminatorThemes(plugin.Plugin):
             gerr(_("Failed to download selected theme"))
             return
 
-        # Creates a new profile and overwrites the default colors for the new theme
+        # creates a new profile and overwrites the default colors for the new theme
         self.terminal.config.add_profile(target) 
         target_data = self.make_dictionary(response.content)
+        template_data = self.config_base.profiles[self.inherits_config_from].copy()
+      
         for k, v in target_data.items():
-            if k != 'background_image':
-                 self.config_base.set_item(k, v[1:-1], target)
+            if k == 'background_darkness':
+                template_data[k] = float(v)
+            elif k == 'background_type':
+                template_data[k] = v
+            else:
+                template_data[k] = v[1:-1]
 
+        for k, v in template_data.items():
+            if k != 'background_image':
+                self.config_base.set_item(k, v, target)
+                 
         self.terminal.force_set_profile(widget, target)
         self.terminal.config.save()
-
+        self.update_comboInheritsFrom(data)
+        
         # "Remove" button available again
-        self.liststore.set_value(iter, 1, False)
+        data['treeview'].get_model().set_value(iter, 1, False)
         self.on_selection_changed(selection, data)
         treeview.set_enable_tree_lines(True)
+
+    def update_comboInheritsFrom(self, data):
+        data['inherits_from_combo'].remove_all()
+        profiles = self.terminal.config.list_profiles()
+        for profile in profiles:
+            data['inherits_from_combo'].append_text(profile)
+
+        data['inherits_from_combo'].set_active(profiles.index(self.terminal.config.get_profile()))
+        self.profiles = profiles
 
     def make_dictionary(self, data):
         arr = []
