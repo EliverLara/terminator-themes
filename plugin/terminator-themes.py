@@ -11,7 +11,7 @@ class TerminatorThemes(plugin.Plugin):
 
     capabilities = ['terminal_menu']
     config_base = ConfigBase()
-    base_url = 'https://api.github.com/repos/EliverLara/terminator-themes/contents/schemes'
+    base_url = 'https://api.github.com/repos/EliverLara/terminator-themes/contents/themes.json'
     inherits_config_from = "default"
 
     def callback(self, menuitems, menu, terminal):
@@ -26,16 +26,14 @@ class TerminatorThemes(plugin.Plugin):
     def configure(self, widget, data = None):
         ui = {}
         dbox = Gtk.Dialog( _("Terminator themes"), None, Gtk.DialogFlags.MODAL)
-
-        self.profiles_from_repo = []
-        response = requests.get(self.base_url)
         
+        headers = { "Accept": "application/vnd.github.v3.raw" }
+        response = requests.get(self.base_url, headers=headers)
+        self.themes_from_repo = response.json()["themes"]
+
         if response.status_code != 200:
             gerr(_("Failed to get list of available themes"))
             return
-
-        for repo in response.json():
-            self.profiles_from_repo.append(repo['name'])
         
         self.profiles = self.terminal.config.list_profiles()
 
@@ -56,14 +54,13 @@ class TerminatorThemes(plugin.Plugin):
         return
 
     def _create_themes_list(self, ui):
-        profiles_list_model = Gtk.ListStore(str, bool)
+        profiles_list_model = Gtk.ListStore(str, bool, object)
         # Set add/remove buttons availability
-        for profile in self.profiles_from_repo:
-            profile = profile.split(".")
-            if profile[0] in self.profiles:
-                profiles_list_model.append([profile[0], False])
+        for theme in self.themes_from_repo:
+            if theme["name"] in self.profiles:
+                profiles_list_model.append([theme["name"], False, theme])
             else:
-                profiles_list_model.append([profile[0], True])
+                profiles_list_model.append([theme["name"], True, theme])
         
         treeview = Gtk.TreeView(profiles_list_model)
 
@@ -167,41 +164,30 @@ class TerminatorThemes(plugin.Plugin):
         treeview = data['treeview']
         selection = treeview.get_selection()
         (store, iter) = selection.get_selected()
-        target = store[iter][0]
+        target = store[iter][2]
         widget = self.terminal.get_vte()
         treeview.set_enable_tree_lines(False)
         
         if not iter:
             return
 
-        headers = { "Accept": "application/vnd.github.v3.raw" }
-        response = requests.get(self.base_url+ '/' + target + '.config', headers=headers)
-       
-        if response.status_code != 200:
-            gerr(_("Failed to download selected theme"))
-            return
-
-        # creates a new profile and overwrites the default colors for the new theme
-        self.terminal.config.add_profile(target) 
-        target_data = self.make_dictionary(response.content)
+        self.terminal.config.add_profile(target["name"]) 
         template_data = self.config_base.profiles[self.inherits_config_from].copy()
-      
-        for k, v in target_data.items():
-            if k == 'background_darkness':
-                template_data[k] = float(v)
-            elif k == 'background_type':
-                template_data[k] = v
-            else:
-                template_data[k] = v[1:-1]
+
+        for k, v in target.items():
+            if k != 'background_image' and k != 'name' and k != 'type':
+                if k == 'background_darkness':
+                    template_data[k] = float(v)
+                else:
+                    template_data[k] = v
 
         for k, v in template_data.items():
-            if k != 'background_image':
-                self.config_base.set_item(k, v, target)
+            self.config_base.set_item(k, v, target["name"])
                  
-        self.terminal.force_set_profile(widget, target)
+        self.terminal.force_set_profile(widget, target["name"])
         self.terminal.config.save()
         self.update_comboInheritsFrom(data)
-        
+
         # "Remove" button available again
         data['treeview'].get_model().set_value(iter, 1, False)
         self.on_selection_changed(selection, data)
@@ -210,20 +196,8 @@ class TerminatorThemes(plugin.Plugin):
     def update_comboInheritsFrom(self, data):
         data['inherits_from_combo'].remove_all()
         profiles = self.terminal.config.list_profiles()
+        self.profiles = profiles
         for profile in profiles:
             data['inherits_from_combo'].append_text(profile)
 
         data['inherits_from_combo'].set_active(profiles.index(self.terminal.config.get_profile()))
-        self.profiles = profiles
-
-    def make_dictionary(self, data):
-        arr = []
-        out_dict = {}
-        for line in data.split("\n"):
-            arr.append(line.split("="))
-
-        for item in arr:
-            if len(item) > 1:
-                out_dict[item[0].strip()] = item[1].strip()
-
-        return out_dict
