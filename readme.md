@@ -1,7 +1,14 @@
-# Terminator themes
-> The biggest collection of [Terminator](https://launchpad.net/terminator) themes in a plugin.
+<!-- Logo -->
 
-![](images/preview.gif)
+<div align="center">
+
+![](static/logo.svg)
+
+The biggest collection of themes for [Terminator](https://launchpad.net/terminator) in a plugin.
+
+![](static/preview.gif)
+
+</div>
 
 ## Installation
 
@@ -43,6 +50,8 @@ Check the `TerminatorThemes` option under `terminator > preferences > plugins`.
 * Select you favorite theme and click `install` (you can [preview available themes](themes.md) before installing).
 * Enjoy! :smiley:
 
+![](static/demo.gif)
+
 ### Setting a Default
 
 There are two ways to set a chosen theme as a default:
@@ -61,4 +70,4 @@ If you do not want to deal with the modification of the configuration file, you 
 4. Choose the layout terminal (in the next column).
 5. Choose you preferred profile.
 
-![](images/set-default.png)
+![](static/set-default.png)
