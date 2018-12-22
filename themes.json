@@ -897,6 +897,24 @@
       "type": "dark"
     },
     {
+      "name": "Material-Ocean",
+      "background_color": "#0f111a",
+      "cursor_color": "#ffcc00",
+      "cursor_color_fg": "False",
+      "foreground_color": "#8f93a2",
+      "palette": "#2e3436:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#d3d7cf:#555753:#f07178:#c3e88d:#f78c6c:#729fcf:#bb80b3:#89ddff:#eeeeec",
+      "type": "dark"
+    },
+    {
+      "name": "Material-Palenight",
+      "background_color": "#292d3e",
+      "cursor_color": "#ffcc00",
+      "cursor_color_fg": "False",
+      "foreground_color": "#a6accd",
+      "palette": "#2e3436:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#d3d7cf:#555753:#f07178:#c3e88d:#f78c6c:#729fcf:#bb80b3:#89ddff:#eeeeec",
+      "type": "dark"
+    },
+    {
       "name": "MaterialDark",
       "palette": "#212121:#b7141f:#457b24:#f6981e:#134eb2:#560088:#0e717c:#efefef:#424242:#e83b3f:#7aba3a:#ffea2e:#54a4f3:#aa4dbc:#26bbd1:#d9d9d9",
       "background_color": "#232322",
