@@ -1,0 +1,20 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node --experimental-modules index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "color": "^3.1.0",
+    "execa": "^1.0.0",
+    "replaceall": "^0.1.6",
+    "string-capitalize": "^1.0.1",
+    "svg-to-png": "^4.0.0"
+  }
+}
