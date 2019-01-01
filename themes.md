@@ -2,7 +2,7 @@
 
 ## Dark background
 
-**3024 night**![3024 night](images/3024-Night.png) | **Aci**![Aci](images/Aci.png)
+**3024 night**![3024 night](images/3024-Night.png) | **Aci**![Aci](images/Aci.png) 
 :---------------------------------------------:|:----------------------------------------------:
 **Aco**![Aco](images/Aco.png) | **Adventuretime**![Adventuretime](images/AdventureTime.png) 
 **Afterglow**![Afterglow](images/Afterglow.png) | **Alienblood**![Alienblood](images/AlienBlood.png) 
@@ -92,16 +92,18 @@
 **Wildcherry**![Wildcherry](images/WildCherry.png) | **Wombat**![Wombat](images/Wombat.png) 
 **Wryan**![Wryan](images/Wryan.png) | **Zenburn**![Zenburn](images/Zenburn.png) 
 
+
 ## Light background
 
-**3024 day**![3024 day](images/3024-Day.png) | **Atomonelight**![Atomonelight](images/AtomOneLight.png)
+**3024 day**![3024 day](images/3024-Day.png) | **Atomonelight**![Atomonelight](images/AtomOneLight.png) 
 :---------------------------------------------:|:----------------------------------------------:
-**Ayu_light**![Ayu_light](images/ayu_light.png) | **Belafonte day**![Belafonte day](images/Belafonte-Day.png)
-**Clrs**![Clrs](images/CLRS.png) | **Github**![Github](images/Github.png)
-**Hemisu light**![Hemisu light](images/Hemisu-light.png) | **Man page**![Man page](images/Man-Page.png)
-**Mar**![Mar](images/Mar.png) | **Material**![Material](images/Material.png)
-**Novel**![Novel](images/Novel.png) | **Onehalflight**![Onehalflight](images/OneHalfLight.png)
-**Pencillight**![Pencillight](images/PencilLight.png) | **Piatto light**![Piatto light](images/Piatto-Light.png)
-**Solarized light**![Solarized light](images/Solarized-Light.png) | **Spring**![Spring](images/Spring.png)
-**Terminal basic**![Terminal basic](images/Terminal-Basic.png) | **Tomorrow**![Tomorrow](images/Tomorrow.png)
-**Violet light**![Violet light](images/Violet-Light.png)
+**Ayu_light**![Ayu_light](images/ayu_light.png) | **Belafonte day**![Belafonte day](images/Belafonte-Day.png) 
+**Clrs**![Clrs](images/CLRS.png) | **Github**![Github](images/Github.png) 
+**Hemisu light**![Hemisu light](images/Hemisu-light.png) | **Man page**![Man page](images/Man-Page.png) 
+**Mar**![Mar](images/Mar.png) | **Material**![Material](images/Material.png) 
+**Novel**![Novel](images/Novel.png) | **Onehalflight**![Onehalflight](images/OneHalfLight.png) 
+**Pencillight**![Pencillight](images/PencilLight.png) | **Piatto light**![Piatto light](images/Piatto-Light.png) 
+**Solarized light**![Solarized light](images/Solarized-Light.png) | **Spring**![Spring](images/Spring.png) 
+**Terminal basic**![Terminal basic](images/Terminal-Basic.png) | **Tomorrow**![Tomorrow](images/Tomorrow.png) 
+**Violet light**![Violet light](images/Violet-Light.png) | 
+    
