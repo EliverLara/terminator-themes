@@ -14,7 +14,7 @@ export const createNewThemesImgs = async newThemes => {
 
     for(let theme of targets) {
         theme.palette = theme.palette.split(":")
-        makeImg(setColors(theme), theme.name)
+        await makeImg(setColors(theme), theme.name)
     }
 }
 
