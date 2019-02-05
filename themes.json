@@ -296,6 +296,15 @@
       "type": "dark"
     },
     {
+      "name": "Chalkby",
+      "background_color": "#1f2d2d",
+      "cursor_color": "#ffffff",
+      "cursor_color_fg": "False",
+      "foreground_color": "#ffffff",
+      "palette": "#2e3436:#ffb0b0:#c8ff9b:#fffca4:#6f9ceb:#9395d3:#bdeaff:#d3d7cf:#555753:#ffb0b0:#c8ff9b:#fffca4:#6f9ceb:#9395d3:#bdeaff:#eeeeec",
+      "type": "dark"
+    },
+    {
       "name": "Chesterish",
       "background_color": "#293340",
       "background_image": "None",
