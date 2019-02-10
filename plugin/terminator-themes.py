@@ -29,12 +29,12 @@ class TerminatorThemes(plugin.Plugin):
         
         headers = { "Accept": "application/vnd.github.v3.raw" }
         response = requests.get(self.base_url, headers=headers)
-        self.themes_from_repo = response.json()["themes"]
 
         if response.status_code != 200:
             gerr(_("Failed to get list of available themes"))
             return
         
+        self.themes_from_repo = response.json()["themes"]
         self.profiles = self.terminal.config.list_profiles()
 
         main_container = Gtk.HBox(spacing=7)
