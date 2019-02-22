@@ -9,7 +9,7 @@ let themes = [];
 export const createNewThemesImgs = async newThemes => {
     themes = await readFile('../themes.json')
     themes = JSON.parse(themes).themes
-    newThemes = newThemes.map(item => item.split('/')[1].split('.')[0])
+    newThemes = newThemes.map(item => item.split('.')[0])
     let targets = themes.filter(item => newThemes.includes(item.name))
 
     for(let theme of targets) {
