@@ -76,7 +76,7 @@ class TerminatorThemes(plugin.Plugin):
         scroll_window = Gtk.ScrolledWindow()
         scroll_window.set_size_request(300, 250)
         scroll_window.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
-        scroll_window.add_with_viewport(treeview)
+        scroll_window.add(treeview)
 
         return scroll_window
 
