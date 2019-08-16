@@ -37,11 +37,11 @@ class TerminatorThemes(plugin.Plugin):
         self.themes_from_repo = response.json()["themes"]
         self.profiles = self.terminal.config.list_profiles()
 
-        main_container = Gtk.HBox(spacing=7)
-        main_container.pack_start(self._create_themes_list(ui), True, True, 0)
+        main_container = Gtk.HBox(spacing=5)
+        main_container.pack_start(self._create_themes_grid(ui), True, True, 0)
         main_container.pack_start(self._create_settings_grid(ui), True, True, 0)
         dbox.vbox.pack_start(main_container, True, True, 0)
-
+        
         self.dbox = dbox
         dbox.show_all()
         res = dbox.run()
@@ -51,34 +51,65 @@ class TerminatorThemes(plugin.Plugin):
 
         del(self.dbox)
         dbox.destroy()
+
         return
 
+    def _create_themes_grid(self, ui):
+        grid = Gtk.Grid()
+        grid.set_column_spacing(5)
+        grid.set_row_spacing(7)
+        grid.set_column_homogeneous(True)
+        grid.set_row_homogeneous(True)
+
+        scroll_window = self._create_themes_list(ui)
+
+        #creating buttons to filter by theme type, and setting up their events
+        buttons = list()
+        for theme_type in ["light", "dark", "None"]:
+            button = Gtk.Button(theme_type)
+            buttons.append(button)
+            button.connect("clicked", self.on_filter_button_clicked)
+
+        grid.attach(scroll_window, 0, 0, 4, 10)
+        grid.attach_next_to(buttons[0], scroll_window, Gtk.PositionType.BOTTOM, 1, 1)
+
+        for i, button in enumerate(buttons[1:]):
+            grid.attach_next_to(button, buttons[i], Gtk.PositionType.RIGHT, 1, 1)
+
+        return grid
+
     def _create_themes_list(self, ui):
-        profiles_list_model = Gtk.ListStore(str, bool, object)
+
+        profiles_list_model = Gtk.ListStore(str, str,bool, object)
         # Set add/remove buttons availability
         for theme in self.themes_from_repo:
             if theme["name"] in self.profiles:
-                profiles_list_model.append([theme["name"], False, theme])
+                profiles_list_model.append([theme["name"], theme["type"],False, theme])
             else:
-                profiles_list_model.append([theme["name"], True, theme])
+                profiles_list_model.append([theme["name"], theme["type"],True, theme])
+
+        self.current_filter_theme = None
+        self.theme_filter = profiles_list_model.filter_new()
+        self.theme_filter.set_visible_func(self.theme_filter_func)
         
-        treeview = Gtk.TreeView(profiles_list_model)
+        treeview = Gtk.TreeView.new_with_model(self.theme_filter)
 
         selection = treeview.get_selection()
         selection.set_mode(Gtk.SelectionMode.SINGLE)
         selection.connect("changed", self.on_selection_changed, ui)
         ui['treeview'] = treeview
 
-        renderer_text = Gtk.CellRendererText()
-        column_text = Gtk.TreeViewColumn("Theme", renderer_text, text=0)
-        treeview.append_column(column_text)
+        for i, column_title in enumerate(["Theme", "Type"]):
+            renderer = Gtk.CellRendererText()
+            column = Gtk.TreeViewColumn(column_title, renderer, text=i)
+            treeview.append_column(column)
 
         scroll_window = Gtk.ScrolledWindow()
-        scroll_window.set_size_request(300, 250)
         scroll_window.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
         scroll_window.add(treeview)
 
         return scroll_window
+
 
     def _create_settings_grid(self, ui):
         grid = Gtk.Grid()
@@ -122,6 +153,22 @@ class TerminatorThemes(plugin.Plugin):
 
         return btn
 
+    def theme_filter_func(self, model, iter, data):
+        """Tests if the theme in the row is the one in the filter"""
+        if self.current_filter_theme is None or self.current_filter_theme == "None":
+            return True
+        else:
+            return model[iter][1] == self.current_filter_theme
+
+    def on_filter_button_clicked(self, widget):
+        """Called on any of the button clicks"""
+        #we set the current theme filter to the button's label
+        self.current_filter_theme = widget.get_label()
+
+        #we update the filter, which updates in turn the view
+        self.theme_filter.refilter()
+
+
     def  on_inheritsfromdefaultcheck_toggled(self, check, data=None):
         if check.get_active() is not True:
             data["inherits_from_combo"].set_sensitive(True)
@@ -138,8 +185,8 @@ class TerminatorThemes(plugin.Plugin):
 
     def on_selection_changed(self, selection, data=None):
         (model, iter) = selection.get_selected()
-        data['button_install'].set_sensitive(model[iter][1])
-        data['button_remove'].set_sensitive(model[iter][1] is not True)
+        data['button_install'].set_sensitive(model[iter][2])
+        data['button_remove'].set_sensitive(model[iter][2] is not True)
 
     def on_uninstall(self, button, data):
         treeview = data['treeview']
@@ -157,14 +204,14 @@ class TerminatorThemes(plugin.Plugin):
         self.update_comboInheritsFrom(data)
 
         #'Add' button available again
-        data['treeview'].get_model().set_value(iter, 1, True)
+        data['treeview'].get_model().set_value(iter, 2, True)
         self.on_selection_changed(selection, data)
 
     def on_install(self, button, data):
         treeview = data['treeview']
         selection = treeview.get_selection()
         (store, iter) = selection.get_selected()
-        target = store[iter][2]
+        target = store[iter][3]
         widget = self.terminal.get_vte()
         treeview.set_enable_tree_lines(False)
         
@@ -189,7 +236,7 @@ class TerminatorThemes(plugin.Plugin):
         self.update_comboInheritsFrom(data)
 
         # "Remove" button available again
-        data['treeview'].get_model().set_value(iter, 1, False)
+        data['treeview'].get_model().set_value(iter, 2, False)
         self.on_selection_changed(selection, data)
         treeview.set_enable_tree_lines(True)
 
