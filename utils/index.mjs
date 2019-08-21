@@ -1,6 +1,6 @@
 import execa from 'execa'
-import createThemesJsonFile from './themes-json'
-import { createNewThemesImgs, createMd } from './themes-extras'
+import createThemesJsonFile from './themes-json.mjs'
+import { createNewThemesImgs, createMd } from './themes-extras.mjs'
 
 const main = async() => {
     try {

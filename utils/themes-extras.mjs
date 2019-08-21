@@ -1,8 +1,8 @@
-import { readFile, writeFile, __dirname, unlink } from './utils'
+import { readFile, writeFile, __dirname, unlink } from './utils.mjs'
 import svg_to_png from 'svg-to-png'
 import replaceall from 'replaceall'
 import capitalize from 'string-capitalize'
-import setColors from './svg-template'
+import setColors from './svg-template.mjs'
 
 
 let themes = [];

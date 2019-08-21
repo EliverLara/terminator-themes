@@ -1,4 +1,4 @@
-import { readFile, readdir, writeFile } from './utils'
+import { readFile, readdir, writeFile } from './utils.mjs'
 import Color from 'color'
 
 export default async() => {
