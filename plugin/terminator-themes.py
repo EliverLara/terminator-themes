@@ -38,8 +38,9 @@ class TerminatorThemes(plugin.Plugin):
         self.profiles = self.terminal.config.list_profiles()
 
         main_container = Gtk.HBox(spacing=5)
-        main_container.pack_start(self._create_themes_grid(ui), True, True, 0)
-        main_container.pack_start(self._create_settings_grid(ui), True, True, 0)
+        main_container.pack_start(self._create_themes_grid(ui), True, True, 0) #Left column
+        main_container.pack_start(self._create_settings_grid(ui), True, True, 0) #Right column
+       
         dbox.vbox.pack_start(main_container, True, True, 0)
         
         self.dbox = dbox
@@ -63,20 +64,30 @@ class TerminatorThemes(plugin.Plugin):
 
         scroll_window = self._create_themes_list(ui)
 
-        #creating buttons to filter by theme type, and setting up their events
-        buttons = list()
-        for theme_type in ["light", "dark", "None"]:
-            button = Gtk.Button(theme_type)
-            buttons.append(button)
-            button.connect("clicked", self.on_filter_button_clicked)
+        (combo, search_entry) = self._create_filter_widgets(ui)
 
-        grid.attach(scroll_window, 0, 0, 4, 10)
-        grid.attach_next_to(buttons[0], scroll_window, Gtk.PositionType.BOTTOM, 1, 1)
-
-        for i, button in enumerate(buttons[1:]):
-            grid.attach_next_to(button, buttons[i], Gtk.PositionType.RIGHT, 1, 1)
+        grid.attach(search_entry, 0,0,2,1)
+        grid.attach(combo, 2,0,1,1)
+        grid.attach(scroll_window, 0, 1, 3, 10)
 
         return grid
+
+    def _create_filter_widgets(self, ui):
+
+        combo = Gtk.ComboBoxText()
+        combo.set_entry_text_column(0)
+        combo.connect("changed", self.on_filter_combo_changed)
+        combo.append_text("Filter by type")
+
+        for theme_type in ["light", "dark", "All"]:
+            combo.append_text(theme_type)
+
+        combo.set_active(0)
+
+        search_entry = Gtk.SearchEntry(max_width_chars=30)
+        search_entry.connect("search-changed", self.on_theme_search_changed, ui)    
+
+        return [combo,search_entry]
 
     def _create_themes_list(self, ui):
 
@@ -89,6 +100,7 @@ class TerminatorThemes(plugin.Plugin):
                 profiles_list_model.append([theme["name"], theme["type"],True, theme])
 
         self.current_filter_theme = None
+        self.filter_type = "theme_type"
         self.theme_filter = profiles_list_model.filter_new()
         self.theme_filter.set_visible_func(self.theme_filter_func)
         
@@ -141,7 +153,7 @@ class TerminatorThemes(plugin.Plugin):
         for profile in self.profiles:
             combo.append_text(profile)
 
-        combo.set_active(self.profiles.index(self.terminal.config.get_profile()))
+        combo.set_active(self.profiles.index(self.terminal.config.get_profile())) #set current terminal profile as current item
 
         return combo
     
@@ -154,18 +166,35 @@ class TerminatorThemes(plugin.Plugin):
         return btn
 
     def theme_filter_func(self, model, iter, data):
-        """Tests if the theme in the row is the one in the filter"""
-        if self.current_filter_theme is None or self.current_filter_theme == "None":
+        if self.filter_type == "theme_type":
+            return self.filter_by_theme_type(model, iter, data)
+        else:
+            return self.filter_by_theme_search(model, iter, data)
+
+    def filter_by_theme_search(self, model, iter, data):
+        return model[iter][0].lower().find(self.current_filter_theme) > -1
+
+    def filter_by_theme_type(self, model, iter, data):
+        if self.current_filter_theme is None or self.current_filter_theme == "All":
             return True
         else:
             return model[iter][1] == self.current_filter_theme
 
-    def on_filter_button_clicked(self, widget):
-        """Called on any of the button clicks"""
-        #we set the current theme filter to the button's label
-        self.current_filter_theme = widget.get_label()
+    def on_theme_search_changed(self, widget, ui):
+        self.filter_type = "theme_search"
+        self.current_filter_theme = widget.get_text()
+        self.theme_filter.refilter()
 
-        #we update the filter, which updates in turn the view
+    def on_filter_combo_changed(self, widget):
+
+        if widget.get_active() == 0:
+            self.current_filter_theme = None
+        else:
+            self.current_filter_theme = widget.get_active_text()
+
+        self.filter_type = "theme_type"
+
+        # #we update the filter, which updates in turn the view
         self.theme_filter.refilter()
 
 
