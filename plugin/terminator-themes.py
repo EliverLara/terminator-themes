@@ -1,6 +1,6 @@
 import requests
 import terminatorlib.plugin as plugin
-from gi.repository import Gtk
+from gi.repository import Gtk, Gdk
 from terminatorlib.config import ConfigBase
 from terminatorlib.translation import _
 from terminatorlib.util import get_config_dir, err, dbg, gerr
@@ -127,11 +127,13 @@ class TerminatorThemes(plugin.Plugin):
         grid = Gtk.Grid()
         grid.set_column_spacing(5)
         grid.set_row_spacing(7)
-        grid.attach(self._create_default_inherits_check(ui), 0, 0, 2, 1)
-        grid.attach(Gtk.Label("Available profiles: "), 0, 1, 1, 1)
-        grid.attach(self._create_inherits_from_combo(ui), 1, 1, 1, 1)
-        grid.attach(self._create_main_action_button(ui, "install", self.on_install), 0, 4, 1, 1)
-        grid.attach(self._create_main_action_button(ui, "remove", self.on_uninstall), 1, 4, 1, 1)
+        grid.attach(self._create_default_inherits_check(ui), 0, 15, 2, 1)
+        grid.attach(Gtk.Label("Available profiles: "), 0, 16, 1, 1)
+        grid.attach(self._create_inherits_from_combo(ui), 1, 16, 1, 1)
+        grid.attach(self._create_main_action_button(ui, "install", self.on_install), 0, 20, 1, 1)
+        grid.attach(self._create_main_action_button(ui, "remove", self.on_uninstall), 1, 20, 1, 1)
+        self.theme_preview = ThemePreview(self.themes_from_repo[0])
+        grid.attach(self.theme_preview, 0, 10, 4, 2)
 
         return grid
 
@@ -216,6 +218,7 @@ class TerminatorThemes(plugin.Plugin):
         (model, iter) = selection.get_selected()
         data['button_install'].set_sensitive(model[iter][2])
         data['button_remove'].set_sensitive(model[iter][2] is not True)
+        self.theme_preview.update_preview(model[iter][3])
 
     def on_uninstall(self, button, data):
         treeview = data['treeview']
@@ -277,3 +280,75 @@ class TerminatorThemes(plugin.Plugin):
             data['inherits_from_combo'].append_text(profile)
 
         data['inherits_from_combo'].set_active(profiles.index(self.terminal.config.get_profile()))
+
+class ThemePreview(Gtk.VBox):
+    def __init__(self, theme):
+        Gtk.VBox.__init__(self)
+
+        self.theme = theme
+        self.palette_preview_colors = list()
+        self.prompt_line = {}
+
+        self.pack_start (self._create_preview_margin(), True, True,0)
+        self.pack_start (self._create_palette_preview(), False,False,0)
+        self.pack_start (self._create_preview_margin(), True, True,0)
+        self.pack_start (self._create_prompt_line(), True, True,0)
+
+        self.update_preview(self.theme)
+
+    def _create_palette_preview(self):
+        palette_preview = Gtk.FlowBox()
+        palette_preview.set_min_children_per_line(10)
+        palette_preview.set_max_children_per_line(10)
+        palette_preview.set_selection_mode(Gtk.SelectionMode.NONE)
+
+        palette_preview.add(Gtk.VBox())
+
+        for color in self.theme['palette'].split(":")[0:8]:
+            area = Gtk.DrawingArea()
+            area.set_size_request(20, 25)
+            color_preview = Gtk.VBox()
+            color_preview.pack_start(area, False,False,0)
+            color_preview.modify_bg(0, color = Gdk.color_parse(color)) 
+           
+            self.palette_preview_colors.append(color_preview)
+
+            palette_preview.add(color_preview)
+
+        palette_preview.add(Gtk.VBox())
+
+        return palette_preview
+
+    def _create_prompt_line(self):
+        line = Gtk.HBox()
+
+        self.prompt_line["prompt"] = Gtk.Label("  ~> ")
+        self.prompt_line["cmd"] = Gtk.Label("echo ")
+        self.prompt_line["arg"] = Gtk.Label("\"nice\" ")
+
+        line.pack_start(self.prompt_line["prompt"],False,True,0)
+        line.pack_start(self.prompt_line["cmd"],False,True,0)
+        line.pack_start(self.prompt_line["arg"],False,True,0)
+
+        return line
+
+    def _create_preview_margin(self):
+        area = Gtk.DrawingArea()
+        area.set_size_request(270, 50)
+
+        return area
+
+    def update_preview(self, new_theme):
+        self.modify_bg(0, color = Gdk.color_parse(new_theme['background_color'])) 
+        self.update_palette_preview(new_theme['palette'])
+        self.update_prompt_line_colors(new_theme['palette'])
+ 
+    def update_palette_preview(self, palette):
+        for i,color in enumerate(palette.split(":")[0:8]):
+            self.palette_preview_colors[i].modify_bg(0,color = Gdk.color_parse(color)) 
+            
+    def update_prompt_line_colors(self, palette):
+        palette = palette.split(":")
+        self.prompt_line["prompt"].modify_fg(0,color = Gdk.color_parse(palette[6])) 
+        self.prompt_line["cmd"].modify_fg(0,color = Gdk.color_parse(palette[3])) 
+        self.prompt_line["arg"].modify_fg(0,color = Gdk.color_parse(palette[2])) 
