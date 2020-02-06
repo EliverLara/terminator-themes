@@ -52,7 +52,7 @@ Check the `TerminatorThemes` option under `terminator > preferences > plugins`.
 
 ![](static/demo.gif)
 
-### Setting a Default
+## Setting a Default
 
 There are two ways to set a chosen theme as a default:
 
@@ -70,4 +70,8 @@ If you do not want to deal with the modification of the configuration file, you 
 4. Choose the layout terminal (in the next column).
 5. Choose you preferred profile.
 
-![](static/set-default.png)
+![](static/set_default.png)
+
+Additionally in order to reuse your new selected profile in the new terminals (avoid selecting the profile in each split) open `preferences > global` and check the `'Re-use profiles for new terminals'` option.
+
+![](static/split_with_profile.png)
