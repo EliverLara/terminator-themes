@@ -654,6 +654,14 @@
       "type": "dark"
     },
     {
+      "name": "Halcyon",
+      "background_color": "#171c28",
+      "cursor_color": "#5ccfe6",
+      "foreground_color": "#d7dce2",
+      "palette": "#1d2433:#ef6b73:#bae67e:#ffd580:#6679a4:#c3a6ff:#5ccfe6:#d7dce2:#1d2433:#ef6b73:#bae67e:#ffd580:#6679a4:#c3a6ff:#5ccfe6:#d7dce2",
+      "type": "dark"
+    },
+    {
       "name": "Hardcore",
       "palette": "#1b1d1e:#f92672:#a6e22e:#fd971f:#66d9ef:#9e6ffe:#5e7175:#ccccc6:#505354:#ff669d:#beed5f:#e6db74:#66d9ef:#9e6ffe:#a3babf:#f8f8f2",
       "background_color": "#121212",
