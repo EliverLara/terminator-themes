@@ -1,4 +1,3 @@
-import requests
 import terminatorlib.plugin as plugin
 from gi.repository import Gtk, Gdk
 from terminatorlib.config import ConfigBase
