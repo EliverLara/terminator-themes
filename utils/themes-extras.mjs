@@ -2,6 +2,7 @@ import { readFile, writeFile, __dirname, unlink } from './utils.mjs'
 import svg_to_png from 'svg-to-png'
 import replaceall from 'replaceall'
 import capitalize from 'string-capitalize'
+import sharp from 'sharp'
 import setColors from './svg-template.mjs'
 
 
@@ -19,11 +20,14 @@ export const createNewThemesImgs = async newThemes => {
 }
 
 const makeImg = async (xml, fileName) => {
-    fileName = `${changeSpaces(fileName)}.svg`
+    fileName = changeSpaces(fileName);
+    let svg = `${fileName}.svg`
     try {
-        await writeFile(fileName, xml)
-        await svg_to_png.convert(`${__dirname}/${fileName}`, "../images")   
-        await unlink(fileName)
+        await writeFile(svg, xml)
+        await sharp(`${__dirname}/${svg}`)
+                .png()
+                .toFile(`../images/${fileName}.png`)   
+        await unlink(svg)
     }catch(err) {
         console.log(err)
     }
