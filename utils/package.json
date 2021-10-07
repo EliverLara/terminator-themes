@@ -13,6 +13,7 @@
   "dependencies": {
     "color": "^3.1.0",
     "execa": "^1.0.0",
+    "minimist": "^1.2.5",
     "replaceall": "^0.1.6",
     "string-capitalize": "^1.0.1",
     "svg-to-png": "^4.0.0"
