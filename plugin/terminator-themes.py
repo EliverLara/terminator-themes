@@ -250,13 +250,15 @@ class TerminatorThemes(plugin.Plugin):
         if not iter:
             return
 
-        self.terminal.config.add_profile(target["name"]) 
+        self.terminal.config.add_profile(target["name"], None) 
         template_data = self.config_base.profiles[self.inherits_config_from].copy()
 
         for k, v in target.items():
             if k != 'background_image' and k != 'name' and k != 'type':
                 if k == 'background_darkness':
                     template_data[k] = float(v)
+                if k == 'cursor_color':
+                    template_data['cursor_fg_color'] = v
                 else:
                     template_data[k] = v
 
