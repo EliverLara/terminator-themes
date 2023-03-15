@@ -311,6 +311,15 @@
       "type": "light"
     },
     {
+      "name": "Catppuccin_Macchiato",
+      "cursor_color": "#f4dbd6",
+      "background_color": "#24273a",
+      "foreground_color": "#cad3f5",
+      "palette": "#494d64:#ed8796:#a6da95:#eed49f:#8aadf4:#f5bde6:#8bd5ca:#b8c0e0:#5b6078:#ed8796:#a6da95:#eed49f:#8aadf4:#f5bde6:#8bd5ca:#a5adcb",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
       "name": "Chalk",
       "palette": "#7d8b8f:#b23a52:#789b6a:#b9ac4a:#2a7fac:#bd4f5a:#44a799:#d2d8d9:#888888:#f24840:#80c470:#ffeb62:#4196ff:#fc5275:#53cdbd:#d2d8d9",
       "background_color": "#2b2d2e",
