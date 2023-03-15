@@ -4,6 +4,7 @@ from gi.repository import Gtk, Gdk
 from terminatorlib.config import ConfigBase
 from terminatorlib.translation import _
 from terminatorlib.util import get_config_dir, err, dbg, gerr
+from terminatorlib.version import APP_VERSION
 
 AVAILABLE = ['TerminatorThemes']
 
@@ -250,13 +251,26 @@ class TerminatorThemes(plugin.Plugin):
         if not iter:
             return
 
-        self.terminal.config.add_profile(target["name"]) 
+        # In newer versions of terminator an extra parameter ('toClone') was added to the add_profile method, so it must be set to None
+        if APP_VERSION > "2.1.1":
+            self.terminal.config.add_profile(target["name"], None) 
+        else:
+            self.terminal.config.add_profile(target["name"]) 
+
         template_data = self.config_base.profiles[self.inherits_config_from].copy()
 
         for k, v in target.items():
             if k != 'background_image' and k != 'name' and k != 'type':
                 if k == 'background_darkness':
                     template_data[k] = float(v)
+                elif k == 'cursor_color':
+                    if APP_VERSION > "2.1.1": # Apply new renamed properties for terminator >= 2.1.2
+                        template_data['cursor_bg_color'] = v
+                        #template_data['cursor_fg_color'] = "#f9f06b"
+                        #template_Data['cursor_color_default'] = False
+                    else:
+                        template_data['cursor_color_fg'] = False # Add this property in order to use the custom cursor color
+                        template_data[k] = v
                 else:
                     template_data[k] = v
 
