@@ -293,6 +293,15 @@
       "type": "dark"
     },
     {
+      "name": "Catppuccin_Latte",
+      "cursor_color": "#dc8a78",
+      "background_color": "#eff1f5",
+      "foreground_color": "#4c4f69",
+      "palette": "#5c5f77:#d20f39:#40a02b:#df8e1d:#1e66f5:#ea76cb:#179299:#acb0be:#6c6f85:#d20f39:#40a02b:#df8e1d:#1e66f5:#ea76cb:#179299:#bcc0cc",
+      "background_image": "None",
+      "type": "light"
+    },
+    {
       "name": "Chalk",
       "palette": "#7d8b8f:#b23a52:#789b6a:#b9ac4a:#2a7fac:#bd4f5a:#44a799:#d2d8d9:#888888:#f24840:#80c470:#ffeb62:#4196ff:#fc5275:#53cdbd:#d2d8d9",
       "background_color": "#2b2d2e",
