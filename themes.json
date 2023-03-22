@@ -19,6 +19,15 @@
       "type": "dark"
     },
     {
+      "name": "Abernathy",
+      "palette": "#000000:#cd0000:#00cd00:#cdcd00:#1093f5:#cd00cd:#00cdcd:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#11b5f6:#ff00ff:#00ffff:#ffffff",
+      "background_color": "#111416",
+      "cursor_color": "#bbbbbb",
+      "foreground_color": "#eeeeec",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
       "name": "Aci",
       "background_color": "#0d1926",
       "background_image": "None",
@@ -34,6 +43,15 @@
       "cursor_color": "#bae2fb",
       "foreground_color": "#b4e1fd",
       "palette": "#3f3f3f:#ff0883:#83ff08:#ff8308:#0883ff:#8308ff:#08ff83:#bebebe:#474747:#ff1e8e:#8eff1e:#ff8e1e:#0883ff:#8e1eff:#1eff8e:#c4c4c4",
+      "type": "dark"
+    },
+    {
+      "name": "Adventure",
+      "palette": "#040404:#d84a33:#5da602:#eebb6e:#417ab3:#e5c499:#bdcfe5:#dbded8:#685656:#d76b42:#99b52c:#ffb670:#97d7ef:#aa7900:#bdcfe5:#e4d5c7",
+      "background_color": "#040404",
+      "cursor_color": "#feffff",
+      "foreground_color": "#feffff",
+      "background_image": "None",
       "type": "dark"
     },
     {
@@ -62,11 +80,47 @@
       "type": "dark"
     },
     {
+      "name": "Alabaster",
+      "palette": "#000000:#aa3731:#448c27:#cb9000:#325cc0:#7a3e9d:#0083b2:#f7f7f7:#777777:#f05050:#60cb00:#ffbc5d:#007acc:#e64ce6:#00aacb:#f7f7f7",
+      "background_color": "#f7f7f7",
+      "cursor_color": "#007acc",
+      "foreground_color": "#000000",
+      "background_image": "None",
+      "type": "light"
+    },
+    {
       "name": "AlienBlood",
       "palette": "#112616:#7f2b27:#2f7e25:#717f24:#2f6a7f:#47587f:#327f77:#647d75:#3c4812:#e08009:#18e000:#bde000:#00aae0:#0058e0:#00e0c4:#73fa91",
       "background_color": "#0f1610",
       "cursor_color": "#73fa91",
       "foreground_color": "#637d75",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
+      "name": "Andromeda",
+      "palette": "#000000:#cd3131:#05bc79:#e5e512:#2472c8:#bc3fbc:#0fa8cd:#e5e5e5:#666666:#cd3131:#05bc79:#e5e512:#2472c8:#bc3fbc:#0fa8cd:#e5e5e5",
+      "background_color": "#262a33",
+      "cursor_color": "#f8f8f0",
+      "foreground_color": "#e5e5e5",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
+      "name": "Apple Classic",
+      "palette": "#000000:#c91b00:#00c200:#c7c400:#0225c7:#ca30c7:#00c5c7:#c7c7c7:#686868:#ff6e67:#5ffa68:#fffc67:#6871ff:#ff77ff:#60fdff:#ffffff",
+      "background_color": "#2c2b2b",
+      "cursor_color": "#c7c7c7",
+      "foreground_color": "#d5a200",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
+      "name": "arcoiris",
+      "palette": "#333333:#da2700:#12c258:#ffc656:#518bfc:#e37bd9:#63fad5:#bab2b2:#777777:#ffb9b9:#e3f6aa:#ffddaa:#b3e8f3:#cbbaf9:#bcffc7:#efefef",
+      "background_color": "#201f1e",
+      "cursor_color": "#7a1c1c",
+      "foreground_color": "#eee4d9",
       "background_image": "None",
       "type": "dark"
     },
@@ -134,11 +188,11 @@
     },
     {
       "name": "Ayu mirage",
-      "background_color": "#212733",
+      "palette": "#191e2a:#ed8274:#a6cc70:#fad07b:#6dcbfa:#cfbafa:#90e1c6:#c7c7c7:#686868:#f28779:#bae67e:#ffd580:#73d0ff:#d4bfff:#95e6cb:#ffffff",
+      "background_color": "#1f2430",
+      "cursor_color": "#ffcc66",
+      "foreground_color": "#cbccc6",
       "background_image": "None",
-      "cursor_color": "#FFD580",
-      "foreground_color": "#d9d7ce",
-      "palette": "#212733:#ff3333:#bae67e:#ffd580:#5ccfe6:#d4bfff:#5ccfe6:#3d4752:#3e4b59:#ff3333:#bae67e:#ffd580:#5ccfe6:#d4bfff:#5ccfe6:#eeeeec",
       "type": "dark"
     },
     {
@@ -157,6 +211,15 @@
       "cursor_color": "#d2e8fc",
       "foreground_color": "#d9e6f2",
       "palette": "#000000:#ac6d74:#74ac6d:#aca46d:#6d74ac:#a46dac:#6daca4:#e6e6e6:#262626:#d6b8bc:#bcd6b8:#d6d3b8:#b8bcd6:#d3b8d6:#b8d6d3:#ffffff",
+      "type": "dark"
+    },
+    {
+      "name": "Banana Blueberry",
+      "palette": "#17141f:#ff6b7f:#00bd9c:#e6c62f:#22e8df:#dc396a:#56b6c2:#f1f1f1:#495162:#fe9ea1:#98c379:#f9e46b:#91fff4:#da70d6:#bcf3ff:#ffffff",
+      "background_color": "#191323",
+      "cursor_color": "#e07d13",
+      "foreground_color": "#cccccc",
+      "background_image": "None",
       "type": "dark"
     },
     {
@@ -229,6 +292,42 @@
       "foreground_color": "#aaaaaa",
       "palette": "#2e3436:#ff512f:#b2ffa9:#fffd82:#3185fc:#dd2476:#66d7d1:#f2efea:#555753:#ff512f:#b2ffa9:#fffd82:#3185fc:#dd2476:#66d7d1:#f2efea",
       "type": "dark"
+    },
+    {
+      "name": "Blue Matrix",
+      "palette": "#101116:#ff5680:#00ff9c:#fffc58:#00b0ff:#d57bff:#76c1ff:#c7c7c7:#686868:#ff6e67:#5ffa68:#fffc67:#6871ff:#d682ec:#60fdff:#ffffff",
+      "background_color": "#101116",
+      "cursor_color": "#76ff9f",
+      "foreground_color": "#00a2ff",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
+      "name": "BlueBerryPie",
+      "palette": "#0a4c62:#99246e:#5cb1b3:#eab9a8:#90a5bd:#9d54a7:#7e83cc:#f0e8d6:#201637:#c87272:#0a6c7e:#7a3188:#39173d:#bc94b7:#5e6071:#0a6c7e",
+      "background_color": "#1c0c28",
+      "cursor_color": "#fcfad6",
+      "foreground_color": "#babab9",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
+      "name": "BlulocoDark",
+      "palette": "#41444d:#fc2f52:#25a45c:#ff936a:#3476ff:#7a82da:#4483aa:#cdd4e0:#8f9aae:#ff6480:#3fc56b:#f9c859:#10b1fe:#ff78f8:#5fb9bc:#ffffff",
+      "background_color": "#282c34",
+      "cursor_color": "#ffcc00",
+      "foreground_color": "#b9c0cb",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
+      "name": "BlulocoLight",
+      "palette": "#373a41:#d52753:#23974a:#df631c:#275fe4:#823ff1:#27618d:#babbc2:#676a77:#ff6480:#3cbc66:#c5a332:#0099e1:#ce33c0:#6d93bb:#d3d3d3",
+      "background_color": "#f9f9f9",
+      "cursor_color": "#f32759",
+      "foreground_color": "#373a41",
+      "background_image": "None",
+      "type": "light"
     },
     {
       "name": "Borland",
@@ -1152,6 +1251,15 @@
       "type": "dark"
     },
     {
+      "name": "nord-light",
+      "palette": "#3b4252:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#88c0d0:#d8dee9:#4c566a:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#8fbcbb:#eceff4",
+      "background_color": "#e5e9f0",
+      "cursor_color": "#88c0d0",
+      "foreground_color": "#414858",
+      "background_image": "None",
+      "type": "light"
+    },
+    {
       "name": "Novel",
       "palette": "#000000:#cc0000:#009600:#d06b00:#0000cc:#cc00cc:#0087cc:#cccccc:#808080:#cc0000:#009600:#d06b00:#0000cc:#cc00cc:#0087cc:#ffffff",
       "background_color": "#dfdbc3",
@@ -1385,6 +1493,15 @@
       "type": "dark"
     },
     {
+      "name": "Retro",
+      "palette": "#13a10e:#13a10e:#13a10e:#13a10e:#13a10e:#13a10e:#13a10e:#13a10e:#16ba10:#16ba10:#16ba10:#16ba10:#16ba10:#16ba10:#16ba10:#16ba10",
+      "background_color": "#000000",
+      "cursor_color": "#13a10e",
+      "foreground_color": "#13a10e",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
       "name": "Rippedcasts",
       "palette": "#000000:#cdaf95:#a8ff60:#bfbb1f:#75a5b0:#ff73fd:#5a647e:#bfbfbf:#666666:#eecbad:#bcee68:#e5e500:#86bdc9:#e500e5:#8c9bc4:#e5e5e5",
       "background_color": "#2b2b2b",
@@ -1399,6 +1516,24 @@
       "cursor_color": "#9ccfd8",
       "foreground_color": "#e0def4",
       "palette": "#26233A:#eb6f91:#9ccfd8:#f6c177:#31748f:#65618d:#c4a7e7:#d3d7cf:#26233a:#eb6f91:#9ccfd8:#f6c177:#31748f:#65618d:#c4a7e7:#eeeeec",
+      "type": "dark"
+    },
+    {
+      "name": "rose-pine-dawn",
+      "palette": "#f2e9e1:#b4637a:#56949f:#ea9d34:#286983:#907aa9:#d7827e:#575279:#9893a5:#b4637a:#56949f:#ea9d34:#286983:#907aa9:#d7827e:#575279",
+      "background_color": "#faf4ed",
+      "cursor_color": "#575279",
+      "foreground_color": "#575279",
+      "background_image": "None",
+      "type": "light"
+    },
+    {
+      "name": "rose-pine-moon",
+      "palette": "#393552:#eb6f92:#9ccfd8:#f6c177:#3e8fb0:#c4a7e7:#ea9a97:#e0def4:#6e6a86:#eb6f92:#9ccfd8:#f6c177:#3e8fb0:#c4a7e7:#ea9a97:#e0def4",
+      "background_color": "#232136",
+      "cursor_color": "#e0def4",
+      "foreground_color": "#e0def4",
+      "background_image": "None",
       "type": "dark"
     },
     {
@@ -1635,6 +1770,33 @@
       "type": "dark"
     },
     {
+      "name": "synthwave",
+      "palette": "#000000:#f6188f:#1ebb2b:#fdf834:#2186ec:#f85a21:#12c3e2:#ffffff:#000000:#f841a0:#25c141:#fdf454:#2f9ded:#f97137:#19cde6:#ffffff",
+      "background_color": "#000000",
+      "cursor_color": "#19cde6",
+      "foreground_color": "#dad9c7",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
+      "name": "synthwave-everything",
+      "palette": "#fefefe:#f97e72:#72f1b8:#fede5d:#6d77b3:#c792ea:#f772e0:#fefefe:#fefefe:#f88414:#72f1b8:#fff951:#36f9f6:#e1acff:#f92aad:#fefefe",
+      "background_color": "#2a2139",
+      "cursor_color": "#72f1b8",
+      "foreground_color": "#f0eff1",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
+      "name": "SynthwaveAlpha",
+      "palette": "#241b30:#e60a70:#00986c:#adad3e:#6e29ad:#b300ad:#00b0b1:#b9b1bc:#7f7094:#e60a70:#0ae4a4:#f9f972:#aa54f9:#ff00f6:#00fbfd:#f2f2e3",
+      "background_color": "#241b30",
+      "cursor_color": "#f2f2e3",
+      "foreground_color": "#f2f2e3",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
       "name": "Teerb",
       "palette": "#1c1c1c:#d68686:#aed686:#d7af87:#86aed6:#d6aed6:#8adbb4:#d0d0d0:#1c1c1c:#d68686:#aed686:#e4c9af:#86aed6:#d6aed6:#b1e7dd:#efefef",
       "background_color": "#262626",
@@ -1667,6 +1829,33 @@
       "background_color": "#1b1d1e",
       "cursor_color": "#16b61b",
       "foreground_color": "#b5b5b5",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
+      "name": "tokyonight",
+      "palette": "#15161e:#f7768e:#9ece6a:#e0af68:#7aa2f7:#bb9af7:#7dcfff:#a9b1d6:#414868:#f7768e:#9ece6a:#e0af68:#7aa2f7:#bb9af7:#7dcfff:#c0caf5",
+      "background_color": "#1a1b26",
+      "cursor_color": "#c0caf5",
+      "foreground_color": "#c0caf5",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
+      "name": "tokyonight-day",
+      "palette": "#e9e9ed:#f52a65:#587539:#8c6c3e:#2e7de9:#9854f1:#007197:#6172b0:#a1a6c5:#f52a65:#587539:#8c6c3e:#2e7de9:#9854f1:#007197:#3760bf",
+      "background_color": "#e1e2e7",
+      "cursor_color": "#3760bf",
+      "foreground_color": "#3760bf",
+      "background_image": "None",
+      "type": "light"
+    },
+    {
+      "name": "tokyonight-storm",
+      "palette": "#1d202f:#f7768e:#9ece6a:#e0af68:#7aa2f7:#bb9af7:#7dcfff:#a9b1d6:#414868:#f7768e:#9ece6a:#e0af68:#7aa2f7:#bb9af7:#7dcfff:#c0caf5",
+      "background_color": "#24283b",
+      "cursor_color": "#c0caf5",
+      "foreground_color": "#c0caf5",
       "background_image": "None",
       "type": "dark"
     },
