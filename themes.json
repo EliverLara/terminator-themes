@@ -1779,6 +1779,15 @@
       "type": "dark"
     },
     {
+      "name": "Sweet-Mars",
+      "palette": "#2e3436:#f67e7d:#cae7b9:#e1dd8f:#729fcf:#d7bcc8:#a0c1b9:#d3d7cf:#555753:#f67e7d:#cae7b9:#e1dd8f:#729fcf:#d7bcc8:#a0c1b9:#eeeeec",
+      "background_color": "#1a1e21",
+      "cursor_color": "#e1dd8f",
+      "foreground_color": "#b6b7b9",
+      "background_image": "None",
+      "type": "dark"
+    },
+    {
       "name": "Symfonic",
       "palette": "#000000:#dc322f:#56db3a:#ff8400:#0084d4:#b729d9:#ccccff:#ffffff:#1b1d21:#dc322f:#56db3a:#ff8400:#0084d4:#b729d9:#ccccff:#ffffff",
       "background_color": "#000000",
