@@ -99,8 +99,8 @@
     },
     {
       "name": "Andromeda",
-      "palette": "#000000:#cd3131:#05bc79:#e5e512:#2472c8:#bc3fbc:#0fa8cd:#e5e5e5:#666666:#cd3131:#05bc79:#e5e512:#2472c8:#bc3fbc:#0fa8cd:#e5e5e5",
-      "background_color": "#262a33",
+      "palette": "#000000:#f92672:#00e8c6:#ffe66d:#7cb7ff:#c74ded:#96e072:#e5e5e5:#666666:#ee5d43:#96e072:#f39c12:#7cb7ff:#ff00aa:#00e8c6:#e5e5e5",
+      "background_color": "#23262e",
       "cursor_color": "#f8f8f0",
       "foreground_color": "#e5e5e5",
       "background_image": "None",
