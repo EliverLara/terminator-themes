@@ -10,7 +10,7 @@ The biggest collection of themes for [Terminator](https://launchpad.net/terminat
 
 </div>
 
-## Installation
+## Installation (network-based)
 
 **1. Install the [requests](https://github.com/requests/requests) python package**
 
@@ -23,6 +23,10 @@ The biggest collection of themes for [Terminator](https://launchpad.net/terminat
 
 ```sh
  mkdir -p $HOME/.config/terminator/plugins
+
+- to install the repository version, skipping step 3 - 
+
+./install-remote.sh
 ```
 
 **3. Getting the correct plugin**
@@ -43,6 +47,31 @@ For terminator < 1.9
 
 Check the `TerminatorThemes` option under `terminator > preferences > plugins`.
 
+## Installation (locally-based)
+(This was tested using Terminator 1.92-2 community)
+
+(Since this uses the local JSON file the Python requests package is not required)
+
+**1. Run the install-local.sh script**
+```bash
+$ ./install-local.sh
+```
+
+**2. Activation**
+
+Check the `TerminatorThemesLocal` option under `terminator > preferences > plugins`.
+
+## Uninstallation
+(This was tested using Terminator 1.92-2 community)
+
+**1. Run the uninstall-local.sh script**
+```bash
+$ ./uninstall-local.sh
+
+- for the remote version -
+
+$ ./uninstall-remote.sh
+```
 
 ## Usage
 
