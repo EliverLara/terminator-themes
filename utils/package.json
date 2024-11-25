@@ -15,7 +15,7 @@
     "execa": "^1.0.0",
     "minimist": "^1.2.5",
     "replaceall": "^0.1.6",
-    "sharp": "^0.29.1",
+    "sharp": "^0.30.5",
     "string-capitalize": "^1.0.1",
     "svg-to-png": "^4.0.0"
   }
