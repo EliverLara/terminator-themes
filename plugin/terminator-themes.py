@@ -1,7 +1,7 @@
 import requests
 import terminatorlib.plugin as plugin
 from gi.repository import Gtk, Gdk
-from terminatorlib.config import ConfigBase
+from terminatorlib.config import ConfigBase, DEFAULTS
 from terminatorlib.translation import _
 from terminatorlib.util import get_config_dir, err, dbg, gerr
 from terminatorlib.version import APP_VERSION
@@ -274,7 +274,11 @@ class TerminatorThemes(plugin.Plugin):
                 else:
                     template_data[k] = v
 
+        known_keys = DEFAULTS['profiles']['default']
         for k, v in template_data.items():
+            # Some themes carry keys this Terminator version renamed (e.g. cursor_color_fg); set_item raises on those
+            if k not in known_keys:
+                continue
             self.config_base.set_item(k, v, target["name"])
                  
         self.terminal.force_set_profile(widget, target["name"])
